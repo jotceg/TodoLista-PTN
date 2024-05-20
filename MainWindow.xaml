@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="TodoLista" Height="450" Width="800">
     <Grid>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center">TodoLista</Label>
-        <Button Margin="304,254,304,123" Click="Button_Click">Test</Button>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,58,0,0">Zadanie 1</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,106,0,0" Content="Zadanie 1"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,155,0,0" Content="Zadanie 1"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Zadanie 1"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Zadanie 1" Margin="0,256,0,0"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Zadanie 1" Margin="0,305,0,0"/>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="Zadanie 1" Margin="0,361,0,0"/>
+        <Button Content="Dodaj zadanie" HorizontalAlignment="Left" Margin="681,390,0,0" VerticalAlignment="Top"/>
+        <Grid/>
     </Grid>
 </Window>
