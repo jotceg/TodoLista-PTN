@@ -8,5 +8,6 @@
         Title="TodoLista" Height="450" Width="800">
     <Grid>
         <Label HorizontalAlignment="Center" VerticalAlignment="Center">TodoLista</Label>
+        <Button Margin="304,254,304,123" Click="Button_Click">Test</Button>
     </Grid>
 </Window>

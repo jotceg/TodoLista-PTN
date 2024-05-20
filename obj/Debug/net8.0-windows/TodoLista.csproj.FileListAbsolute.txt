@@ -18,3 +18,4 @@ E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\refint\TodoLista.dll
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.pdb
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.genruntimeconfig.cache
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\ref\TodoLista.dll
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.sourcelink.json
