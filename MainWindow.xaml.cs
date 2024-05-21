@@ -19,6 +19,7 @@ namespace TodoLista
         public MainWindow()
         {
             InitializeComponent();
+
             {//Hiding Backgrounds
                 UserNameTextBox.Background.Opacity = 0;
                 UserNameTextBox.BorderBrush.Opacity = 0;
@@ -34,6 +35,15 @@ namespace TodoLista
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("TEST");
+        }
+
+
+        // Login And Registration Window 
+
+        private void OpenLoginWindowBtn_Click(object sender, RoutedEventArgs e)
+        {
+            LoginAndRegistrationWindow loginAndRegistrationWindow = new LoginAndRegistrationWindow();
+            loginAndRegistrationWindow.Show();
         }
     }
 }

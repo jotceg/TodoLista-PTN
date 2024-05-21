@@ -21,6 +21,7 @@
         <TreeView x:Name="OptionsTreeView" Margin="10,80,10,10" FontSize="15" Background="#FFFFFF" BorderBrush="#FFFFFF">
             <TreeViewItem x:Name="TodayTreeViewItem" Header="Today" IsSelected="True"/>
         </TreeView>
+        <Button x:Name="OpenLoginWindowBtn" Grid.Column="1" Content="Open Login/Registration Window" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Height="61" Width="213" Click="OpenLoginWindowBtn_Click"/>
 
     </Grid>
 </Window>

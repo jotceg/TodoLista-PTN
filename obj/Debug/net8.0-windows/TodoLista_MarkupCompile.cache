@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\
 TodoLista
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\App.xaml
-11407045341
+E:\TodoLista-PTN\App.xaml
+2-175719007
 
-4113533516
-1981451641563
-MainWindow.xaml;
+5-1000721454
+1991660842138
+LoginAndRegistrationWindow.xaml;MainWindow.xaml;
 
 False
 
