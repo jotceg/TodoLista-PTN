@@ -150,6 +150,10 @@ namespace TodoLista
             }
 
             MessageBox.Show($"Zalogowano pomyślnie!");
+
+           
+            LoginCurrentState.SetLoggedIn(true); // Save login state to Login.txt
+
             this.Close();
         }
 

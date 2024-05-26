@@ -45,21 +45,13 @@ E:\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.deps.json
 E:\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.runtimeconfig.json
 E:\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.dll
 E:\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.pdb
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
 E:\TodoLista-PTN\bin\Debug\net8.0-windows\System.Data.OleDb.dll
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
 E:\TodoLista-PTN\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
-E:\TodoLista-PTN\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.csproj.AssemblyReference.cache
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginAndRegistrationWindow.g.cs
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\MainWindow.g.cs
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\App.g.cs
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista_MarkupCompile.cache
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista_MarkupCompile.lref
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginAndRegistrationWindow.baml
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\MainWindow.baml
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.g.resources
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.GeneratedMSBuildEditorConfig.editorconfig
@@ -73,3 +65,5 @@ E:\TodoLista-PTN\obj\Debug\net8.0-windows\refint\TodoLista.dll
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.pdb
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.genruntimeconfig.cache
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\ref\TodoLista.dll
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginScripts\LoginAndRegistrationWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginScripts\LoginAndRegistrationWindow.baml
