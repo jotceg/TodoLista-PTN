@@ -7,15 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="LoginScripts\LoginAndRegistrationWindow.xaml.cs">
+    <Compile Update="Scripts\LoginScripts\LoginAndRegistrationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Scripts\Tasks\EditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="LoginScripts\LoginAndRegistrationWindow.xaml">
+    <Page Update="Scripts\LoginScripts\LoginAndRegistrationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Scripts\Tasks\EditTaskWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

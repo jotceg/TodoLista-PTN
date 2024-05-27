@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TodoLista.Scripts.Tasks;
 
 namespace TodoLista
 {
@@ -34,7 +35,8 @@ namespace TodoLista
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TEST");
+            EditTaskWindow editTaskWindow = new EditTaskWindow();
+            editTaskWindow.Show();
         }
 
 

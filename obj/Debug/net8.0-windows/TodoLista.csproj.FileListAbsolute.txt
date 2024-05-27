@@ -65,5 +65,7 @@ E:\TodoLista-PTN\obj\Debug\net8.0-windows\refint\TodoLista.dll
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.pdb
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.genruntimeconfig.cache
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\ref\TodoLista.dll
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginScripts\LoginAndRegistrationWindow.g.cs
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\LoginScripts\LoginAndRegistrationWindow.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml

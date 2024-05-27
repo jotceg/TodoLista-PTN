@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 E:\TodoLista-PTN\App.xaml
-2746481100
+3-481780399
 
-7-725830051
+81998368643
 199-1299978300
-LoginScripts\LoginAndRegistrationWindow.xaml;MainWindow.xaml;
+MainWindow.xaml;Scripts\LoginScripts\LoginAndRegistrationWindow.xaml;Scripts\Tasks\EditTaskWindow.xaml;
 
 False
 

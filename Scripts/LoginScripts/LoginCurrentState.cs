@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace TodoLista
+namespace TodoLista.Scripts.LoginScripts
 {
     public static class LoginCurrentState
     {
