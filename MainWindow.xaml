@@ -14,14 +14,16 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="TasksListBox" Background="#FFFFFF" BorderBrush="#FFFFFF" Grid.Column="1" Margin="10,50,10,10" FontSize="20"/>
-        <Button x:Name="AddButton" Grid.Column="2" Content="+" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,0,10" FontSize="75" Click="AddButton_Click"/>
+        <Button x:Name="AddButton" Grid.Column="2" Content="+" Template="{StaticResource RoundButton}" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,0,10" FontSize="75" Click="AddButton_Click"/>
         <TextBox x:Name="TopNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" Text="TEST2" VerticalAlignment="Top" FontSize="25"/>
         <Image x:Name="UserImage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Height="60"/>
         <TextBox x:Name="UserNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" Text="TEST1" IsReadOnly="True" HorizontalAlignment="Left" Margin="80,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="12" MaxHeight="60"/>
         <TreeView x:Name="OptionsTreeView" Margin="10,80,10,10" FontSize="15" Background="#FFFFFF" BorderBrush="#FFFFFF">
             <TreeViewItem x:Name="TodayTreeViewItem" Header="Today" IsSelected="True"/>
         </TreeView>
-        <Button x:Name="OpenLoginWindowBtn" Grid.Column="1" Content="Open Login/Registration Window" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Height="61" Width="213" Click="OpenLoginWindowBtn_Click"/>
+        <Button x:Name="OpenLoginWindowBtn" Grid.Column="2" VerticalContentAlignment="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" Height="40" Click="OpenLoginWindowBtn_Click">
+            <TextBox x:Name="OpenLoginWindowBtnTextBox" Text="Login/Register" TextWrapping="Wrap"/>
+        </Button>
 
     </Grid>
 </Window>

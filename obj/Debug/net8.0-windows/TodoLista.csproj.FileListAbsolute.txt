@@ -69,3 +69,11 @@ E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrat
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.g.cs
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.csproj.AssemblyReference.cache
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.g.cs
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.g.cs
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.csproj.Up2Date

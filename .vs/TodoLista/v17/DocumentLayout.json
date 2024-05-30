@@ -1,38 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\TodoLista-PTN\\",
+  "WorkspaceRootPath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\scripts\\tasks\\edittaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\tasks\\edittaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\scripts\\tasks\\edittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\tasks\\edittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\scripts\\loginscripts\\logincurrentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\loginscripts\\logincurrentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\scripts\\loginscripts\\loginandregistrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\loginscripts\\loginandregistrationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|e:\\todolista-ptn\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,111 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "E:\\TodoLista-PTN\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwCYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T16:08:15.649Z",
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-30T09:15:53.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditTaskWindow.xaml.cs",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\Scripts\\Tasks\\EditTaskWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Scripts\\Tasks\\EditTaskWindow.xaml.cs",
-              "ToolTip": "E:\\TodoLista-PTN\\Scripts\\Tasks\\EditTaskWindow.xaml.cs",
-              "RelativeToolTip": "Scripts\\Tasks\\EditTaskWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAYwKgAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T16:15:33.865Z",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-30T08:20:24.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "E:\\TodoLista-PTN\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-27T16:08:23.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditTaskWindow.xaml",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\Scripts\\Tasks\\EditTaskWindow.xaml",
-              "RelativeDocumentMoniker": "Scripts\\Tasks\\EditTaskWindow.xaml",
-              "ToolTip": "E:\\TodoLista-PTN\\Scripts\\Tasks\\EditTaskWindow.xaml",
-              "RelativeToolTip": "Scripts\\Tasks\\EditTaskWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-27T16:10:27.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "E:\\TodoLista-PTN\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-26T12:43:09.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "E:\\TodoLista-PTN\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAiwBAAAAANAAAA",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T12:33:50.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginCurrentState.cs",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\Scripts\\LoginScripts\\LoginCurrentState.cs",
-              "RelativeDocumentMoniker": "Scripts\\LoginScripts\\LoginCurrentState.cs",
-              "ToolTip": "E:\\TodoLista-PTN\\Scripts\\LoginScripts\\LoginCurrentState.cs",
-              "RelativeToolTip": "Scripts\\LoginScripts\\LoginCurrentState.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAIwBYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T12:32:18.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginAndRegistrationWindow.xaml.cs",
-              "DocumentMoniker": "E:\\TodoLista-PTN\\Scripts\\LoginScripts\\LoginAndRegistrationWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Scripts\\LoginScripts\\LoginAndRegistrationWindow.xaml.cs",
-              "ToolTip": "E:\\TodoLista-PTN\\Scripts\\LoginScripts\\LoginAndRegistrationWindow.xaml.cs",
-              "RelativeToolTip": "Scripts\\LoginScripts\\LoginAndRegistrationWindow.xaml.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAIwJcAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T09:49:00.783Z",
+              "WhenOpened": "2024-05-30T08:21:03.653Z",
               "EditorCaption": ""
             }
           ]
