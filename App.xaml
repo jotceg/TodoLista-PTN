@@ -4,8 +4,5 @@
              xmlns:local="clr-namespace:TodoLista">
 
     <Application.Resources>
-        <ControlTemplate x:Key="RoundButton" TargetType="Button">
-            <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
-        </ControlTemplate>
     </Application.Resources>
 </Application>

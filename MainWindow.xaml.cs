@@ -20,7 +20,10 @@ namespace TodoLista
         public MainWindow()
         {
             InitializeComponent();
+        }
 
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
             {//Hiding Backgrounds
                 UserNameTextBox.Background.Opacity = 0;
                 UserNameTextBox.BorderBrush.Opacity = 0;
@@ -28,8 +31,14 @@ namespace TodoLista
                 TasksListBox.BorderBrush.Opacity = 0;
                 TopNameTextBox.Background.Opacity = 0;
                 TopNameTextBox.BorderBrush.Opacity = 0;
-                OptionsTreeView.Background.Opacity = 0;
-                OptionsTreeView.BorderBrush.Opacity = 0;
+                TaskListsTreeView.Background.Opacity = 0;
+                TaskListsTreeView.BorderBrush.Opacity = 0;
+            }
+            {//Font Test
+                TasksListBox.Items.Add("1. Umyć naczynia");
+                TasksListBox.Items.Add("    - Zacząć od talerzy");
+                TopNameTextBox.Text = "Prace domowe";
+                UserNameTextBox.Text = "Michał Kaniewski";
             }
         }
 

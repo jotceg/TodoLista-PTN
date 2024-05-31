@@ -6,24 +6,44 @@
         xmlns:local="clr-namespace:TodoLista"
         xmlns:Collections="clr-namespace:System.Collections;assembly=System.Runtime" x:Class="TodoLista.MainWindow"
         mc:Ignorable="d"
-        Title="TodoLista" Height="450" Width="800" Background="Aquamarine">
+        Title="TodoLista" Height="450" Width="800" Loaded="MainWindow_Loaded">
+    <Window.Resources>
+        <ControlTemplate x:Key="RoundButton" TargetType="Button">
+            <Grid>
+                <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="6*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="TasksListBox" Background="#FFFFFF" BorderBrush="#FFFFFF" Grid.Column="1" Margin="10,50,10,10" FontSize="20"/>
-        <Button x:Name="AddButton" Grid.Column="2" Content="+" Template="{StaticResource RoundButton}" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,0,10" FontSize="75" Click="AddButton_Click"/>
-        <TextBox x:Name="TopNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" Text="TEST2" VerticalAlignment="Top" FontSize="25"/>
+        <Rectangle Grid.ColumnSpan="3" Opacity="0.8">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Aquamarine" Offset="0.0"/>
+                    <GradientStop Color="Bisque" Offset="0.25"/>
+                    <GradientStop Color="Coral" Offset="0.50"/>
+                    <GradientStop Color="DarkGoldenrod" Offset="0.75"/>
+                    <GradientStop Color="ForestGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0"/>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
+        <ListBox x:Name="TasksListBox" Background="#FFFFFF" BorderBrush="#FFFFFF" Grid.Column="1" Margin="10,50,10,10" FontSize="20" FontFamily="Bahnschrift" />
+        <Button x:Name="AddButton" Grid.Column="2" Template="{StaticResource RoundButton}" Background="White" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,0,10" FontSize="75" Click="AddButton_Click">
+            <Image/>
+        </Button>
+        <TextBox x:Name="TopNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" FontFamily="Bahnschrift"/>
         <Image x:Name="UserImage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Height="60"/>
-        <TextBox x:Name="UserNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" Text="TEST1" IsReadOnly="True" HorizontalAlignment="Left" Margin="80,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="12" MaxHeight="60"/>
-        <TreeView x:Name="OptionsTreeView" Margin="10,80,10,10" FontSize="15" Background="#FFFFFF" BorderBrush="#FFFFFF">
+        <TextBox x:Name="UserNameTextBox" Background="#FFFFFF" BorderBrush="#FFFFFF" IsReadOnly="True" HorizontalAlignment="Left" Margin="80,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" MaxHeight="60" FontFamily="Bahnschrift"/>
+        <TreeView x:Name="TaskListsTreeView" Margin="10,80,10,10" FontSize="15" Background="#FFFFFF" BorderBrush="#FFFFFF" FontFamily="Bahnschrift">
             <TreeViewItem x:Name="TodayTreeViewItem" Header="Today" IsSelected="True"/>
         </TreeView>
-        <Button x:Name="OpenLoginWindowBtn" Grid.Column="2" VerticalContentAlignment="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,10,10,0" Height="40" Click="OpenLoginWindowBtn_Click">
-            <TextBox x:Name="OpenLoginWindowBtnTextBox" Text="Login/Register" TextWrapping="Wrap"/>
-        </Button>
-
+        <Button x:Name="OpenLoginWindowBtn" Grid.Column="2" Template="{StaticResource RoundButton}" Content="Login" Background="White" VerticalContentAlignment="Top" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,10,10,0" Width="65" Height="25" Click="OpenLoginWindowBtn_Click" FontFamily="Bahnschrift"/>
     </Grid>
 </Window>

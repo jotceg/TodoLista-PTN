@@ -29,7 +29,7 @@ namespace TodoLista
         private OleDbDataAdapter adapter;
         private DataTable dt;
 
-        //DataBase NAme and Connection Location Information  
+        //DataBase Name and Connection Location Information  
         private const string DataBaseName = "UserDataBase.accdb";
         private const string connectionAndDataStting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + DataBaseName;
 
