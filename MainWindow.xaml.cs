@@ -24,6 +24,7 @@ namespace TodoLista
         public MainWindow()
         {
             InitializeComponent();
+        }
 
             TasksListsItemsControl.ItemsSource = tasksLists;
             

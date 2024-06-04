@@ -145,9 +145,17 @@ namespace TodoLista {
             switch (connectionId)
             {
             case 1:
-            this.TasksListBox = ((System.Windows.Controls.ListBox)(target));
+            
+            #line 9 "..\..\..\MainWindow.xaml"
+            ((TodoLista.MainWindow)(target)).Loaded += new System.Windows.RoutedEventHandler(this.MainWindow_Loaded);
+            
+            #line default
+            #line hidden
             return;
             case 2:
+            this.TasksListBox = ((System.Windows.Controls.ListBox)(target));
+            return;
+            case 3:
             this.AddButton = ((System.Windows.Controls.Button)(target));
             
             #line 19 "..\..\..\MainWindow.xaml"
@@ -156,19 +164,16 @@ namespace TodoLista {
             #line default
             #line hidden
             return;
-            case 3:
+            case 4:
             this.TopNameTextBox = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 4:
-            this.UserImage = ((System.Windows.Controls.Image)(target));
-            return;
             case 5:
-            this.UserNameTextBox = ((System.Windows.Controls.TextBox)(target));
+            this.UserImage = ((System.Windows.Controls.Image)(target));
             return;
             case 6:
             this.TasksListsItemsControl = ((System.Windows.Controls.ItemsControl)(target));
             return;
-            case 8:
+            case 9:
             this.OpenLoginWindowBtn = ((System.Windows.Controls.Button)(target));
             
             #line 30 "..\..\..\MainWindow.xaml"

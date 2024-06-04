@@ -3,8 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TodoLista">
     <Application.Resources>
-        <ControlTemplate x:Key="RoundButton" TargetType="Button">
-            <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
-        </ControlTemplate>
     </Application.Resources>
 </Application>
