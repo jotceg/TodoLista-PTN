@@ -16,6 +16,7 @@ namespace TodoLista
 
             Window startupWindow = new LoginAndRegistrationWindow();
 
+
             /* if (LoginCurrentState.IsLoggedIn())
             {
                 startupWindow = new MainWindow();
