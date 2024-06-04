@@ -1,1 +1,2 @@
-True
+User: kuba
+UserPassword: kuba

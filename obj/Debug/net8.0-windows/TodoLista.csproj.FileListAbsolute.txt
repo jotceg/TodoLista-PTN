@@ -77,3 +77,17 @@ C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\T
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.csproj.Up2Date
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\System.Data.OleDb.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.AssemblyReference.cache
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.CopyComplete

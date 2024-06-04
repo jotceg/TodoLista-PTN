@@ -11,18 +11,21 @@ namespace TodoLista
     public partial class App : Application
     {
         protected override void OnStartup(StartupEventArgs e)
-        { 
+        {
+            base.OnStartup(e);
 
-            if (LoginCurrentState.IsLoggedIn())
+            Window startupWindow = new LoginAndRegistrationWindow();
+
+            /* if (LoginCurrentState.IsLoggedIn())
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                startupWindow = new MainWindow();
             }
             else
             {
-                LoginAndRegistrationWindow loginAndRegistrationWindow = new LoginAndRegistrationWindow();
-                loginAndRegistrationWindow.Show();
-            }
+                startupWindow = new LoginAndRegistrationWindow();
+            } */
+
+            startupWindow.Show();
         }
     }
 
