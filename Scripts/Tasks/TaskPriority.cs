@@ -1,6 +1,6 @@
 ﻿namespace TodoLista.Scripts.Tasks
 {
-    internal enum ETaskPriority
+    public enum ETaskPriority
     {
         Low,
         Medium,

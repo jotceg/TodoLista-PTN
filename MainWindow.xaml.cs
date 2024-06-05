@@ -10,6 +10,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TodoLista.Scripts.Tasks;
 using TodoLista.Scripts.LoginScripts;
+using Microsoft.VisualBasic;
+using TodoLista.Scripts;
 
 namespace TodoLista
 {
@@ -24,42 +26,53 @@ namespace TodoLista
         public MainWindow()
         {
             InitializeComponent();
-        }
 
             TasksListsItemsControl.ItemsSource = tasksLists;
             
             UserNameTextBox.Text += State.User.Login;
-            
-            {//Hiding Backgrounds
-                UserNameTextBox.Background.Opacity = 0;
-                UserNameTextBox.BorderBrush.Opacity = 0;
-                TasksListBox.Background.Opacity = 0;
-                TasksListBox.BorderBrush.Opacity = 0;
-                TopNameTextBox.Background.Opacity = 0;
-                TopNameTextBox.BorderBrush.Opacity = 0;
-                //OptionsTreeView.Background.Opacity = 0;
-                //OptionsTreeView.BorderBrush.Opacity = 0;
-            }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             EditTaskWindow editTaskWindow = new EditTaskWindow();
             editTaskWindow.Show();
+            Close();
         }
 
-        // Login And Registration Window 
-
-        private void OpenLoginWindowBtn_Click(object sender, RoutedEventArgs e)
+        private void SignOut(object sender, RoutedEventArgs e)
         {
             LoginAndRegistrationWindow loginAndRegistrationWindow = new LoginAndRegistrationWindow();
             loginAndRegistrationWindow.Show();
+            State.SignOut();
+            Close();
         }
 
         private void OpenTasksList(object sender, RoutedEventArgs e)
         {
             Button clickedButton = (Button)sender;
             int id = int.Parse(clickedButton.Uid);
+            State.SelectedTasksListId = id;
+            TasksListBox.Items.Clear();
+            foreach (TasksList tasksList in tasksLists)
+            {
+                if (tasksList.Id == State.SelectedTasksListId)
+                {
+                    foreach (Scripts.Tasks.Task task in tasksList.Tasks)
+                    {
+                        TasksListBox.Items.Add(task.Title);
+                    };
+                    break;
+                }
+            }
+        }
+
+        private void AddTasksListButton_Click(object sender, RoutedEventArgs e)
+        {
+            string newTasksListName = Interaction.InputBox("Wpisz nazwę listy zadań", "Dodawanie listy zadań", "");
+            
+            DatabaseManager.AddTasksList(State.User.Id, newTasksListName);
+            new MainWindow().Show();
+            Close();
         }
     }
 }

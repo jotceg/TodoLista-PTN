@@ -174,8 +174,39 @@ namespace TodoLista
                             // Assuming your table has columns like "Id", "Task", "Completed"
                             string tasksListName = reader["ListName"].ToString();
                             int tasksListId = (int)reader["ListId"]; // Adjust data type based on actual column
+                            List<Scripts.Tasks.Task> tasks = new List<Scripts.Tasks.Task>();
 
-                            tasksLists.Add(new TasksList(userId, tasksListId, tasksListName));
+                            tasksLists.Add(new TasksList(userId, tasksListId, tasksListName, tasks));
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < tasksLists.Count(); i++)
+            {
+                using (conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                {
+                    string query = "SELECT * FROM Tasks where ListId = @ListId";
+
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ListId", tasksLists[i].Id);
+
+                        conn.Open();
+
+                        using (OleDbDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Assuming your table has columns like "Id", "Task", "Completed"
+                                string taskName = reader["Title"].ToString();
+                                int taskId = (int)reader["TaskId"]; // Adjust data type based on actual column
+                                string description = reader["Description"].ToString();
+                                string priority = (string)reader["Priority"];
+                                DateTime realizationDate = (DateTime)reader["RealizationDate"];
+
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                            }
                         }
                     }
                 }

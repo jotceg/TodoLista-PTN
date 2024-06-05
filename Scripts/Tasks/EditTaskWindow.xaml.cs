@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TodoLista.Scripts.LoginScripts;
 
 namespace TodoLista.Scripts.Tasks
 {
@@ -29,6 +30,14 @@ namespace TodoLista.Scripts.Tasks
         //DataBase NAme and Connection Location Information  
         private const string DataBaseName = "TasksDataBase.accdb";
         private const string connectionAndDataString = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + DataBaseName;
+
+        private const string userDataBase = "UserDataBase.accdb";
+        private const string tasksListsDataBase = "TasksListsDataBase.accdb";
+        private const string tasksDataBase = "TasksDataBase.accdb";
+        private const string userDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + userDataBase;
+        private const string tasksListDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksListsDataBase;
+        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase;
+
         public EditTaskWindow()
         {
             InitializeComponent();
@@ -36,22 +45,113 @@ namespace TodoLista.Scripts.Tasks
             GetTimeTableData();
         }
 
+        public void RetrieveUserData()
+        {
+            int userId = 0;
+            string userLogin = "", userPassword = "";
+
+            using (conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            {
+                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Name", State.User.Login);
+                    cmd.Parameters.AddWithValue("@UserPassword", State.User.Password);
+
+                    conn.Open();
+
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            userId = reader.GetInt32(reader.GetOrdinal("Id"));
+                            userLogin = reader.GetString(reader.GetOrdinal("Name"));
+                            userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                        }
+                    }
+                }
+            }
+
+            List<TasksList> tasksLists = new List<TasksList>();
+
+            using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            {
+                string query = "SELECT * FROM Lists where UserId = @UserId";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+
+                    conn.Open();
+
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Assuming your table has columns like "Id", "Task", "Completed"
+                            string tasksListName = reader["ListName"].ToString();
+                            int tasksListId = (int)reader["ListId"]; // Adjust data type based on actual column
+                            List<Scripts.Tasks.Task> tasks = new List<Scripts.Tasks.Task>();
+
+                            tasksLists.Add(new TasksList(userId, tasksListId, tasksListName, tasks));
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < tasksLists.Count(); i++)
+            {
+                using (conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                {
+                    string query = "SELECT * FROM Tasks where ListId = @ListId";
+
+                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ListId", tasksLists[i].Id);
+
+                        conn.Open();
+
+                        using (OleDbDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Assuming your table has columns like "Id", "Task", "Completed"
+                                string taskName = reader["Title"].ToString();
+                                int taskId = (int)reader["TaskId"]; // Adjust data type based on actual column
+                                string description = reader["Description"].ToString();
+                                string priority = (string)reader["Priority"];
+                                DateTime realizationDate = (DateTime)reader["RealizationDate"];
+
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                            }
+                        }
+                    }
+                }
+            }
+
+            State.User = new User(userId, userLogin, userPassword, tasksLists);
+        }
+
         private void AddTask(string priority, string title, string description, DateTime date)
         {
-            conn = new OleDbConnection(connectionAndDataString);
+            using (conn = new OleDbConnection(connectionAndDataString))
+            {
+                string query = "INSERT INTO Tasks (ListId, Title, Description, Priority, RealizationDate) VALUES (@ListId, @Title, @Description, @Priority, @RealizationDate)";
 
-            string query = "INSERT INTO Tasks (Priority,Title, Description,[RealizationDate]) VALUES (@Priority,@Title, @Description,@RealizationDate)";
+                using (cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ListId", State.SelectedTasksListId);
+                    cmd.Parameters.AddWithValue("@Title", title); // Add Parameters name to DataBase
+                    cmd.Parameters.AddWithValue("@Description", description);
+                    cmd.Parameters.AddWithValue("@Priority", priority);
+                    cmd.Parameters.AddWithValue("@RealizationDate", date);
+                    
+                    conn.Open(); // Open Connetction With DataBase
+                    cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase
+                }
+            }
 
-            cmd = new OleDbCommand(query, conn);
-            cmd.Parameters.AddWithValue("@Priority", priority);
-            cmd.Parameters.AddWithValue("@Title", title); // Add Parameters name to DataBase
-            cmd.Parameters.AddWithValue("@Description", description);
-            cmd.Parameters.AddWithValue("@RealizationDate", date);
-
-
-            conn.Open(); // Open Connetction With DataBase
-            cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase
-            conn.Close(); // Close Connetction With DataBase
+            RetrieveUserData();
         }
 
         public void MarkAsCompleted(int id)
@@ -119,7 +219,6 @@ namespace TodoLista.Scripts.Tasks
 
             AddTask(priority, title, description, dateAndTime);
             MessageBox.Show($"Wprowadzono zadanie!");
-            this.Close();
         }
 
         private void DeleteTaskBtn_Click(object sender, RoutedEventArgs e)
@@ -185,6 +284,13 @@ namespace TodoLista.Scripts.Tasks
 
             DataBase.ItemsSource = dt.DefaultView; // See all Users in Window (Test porposes)
             conn.Close();
+        }
+
+        private void DeleteTaskBtn_Kopiuj_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Close();
+            mainWindow.Show();
         }
     }
 }

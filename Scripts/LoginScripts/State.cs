@@ -9,5 +9,11 @@ namespace TodoLista.Scripts.LoginScripts
     public static class State
     {
         public static User User;
+        public static int SelectedTasksListId;
+
+        public static void SignOut()
+        {
+            User = null;
+        }
     }
 }

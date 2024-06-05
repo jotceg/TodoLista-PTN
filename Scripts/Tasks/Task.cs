@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace TodoLista.Scripts.Tasks
 {
-    internal class Task
+    public class Task
     {
-        private Guid Id;
-        private Guid ListId;
+        private int Id;
+        private int ListId;
         public string Title { get; set; }
         public string Description { get; set; }
-        public ETaskPriority Priority { get; set; }
+        public string Priority { get; set; }
         public DateTime Date {  get; set; }
 
-        public Task(Guid ListId, string Title, string Description, ETaskPriority Priority, DateTime Date)
+        public Task(int Id, int ListId, string Title, string Description, string Priority, DateTime Date)
         {
-            Id = Guid.NewGuid();
+            this.Id = Id;
             this.ListId = ListId;
             this.Title = Title;
             this.Description = Description;

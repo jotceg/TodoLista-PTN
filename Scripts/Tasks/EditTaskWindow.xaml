@@ -69,6 +69,7 @@
             <ComboBoxItem>High</ComboBoxItem>
         </ComboBox>
         <Label Content="ID" HorizontalAlignment="Left" Margin="77,119,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="DeleteTaskBtn_Kopiuj" Content="Powrót do głownej" HorizontalAlignment="Left" Margin="621,332,0,0" VerticalAlignment="Top" Height="47" Width="112" Click="DeleteTaskBtn_Kopiuj_Click"/>
 
     </Grid>
 </Window>

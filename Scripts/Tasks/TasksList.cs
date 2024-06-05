@@ -12,11 +12,14 @@ namespace TodoLista.Scripts.Tasks
         public int Id { get; }
         public string Name { get; }
 
-        public TasksList(int UserId, int Id, string Name)
+        public List<Task> Tasks { get; set; }
+
+        public TasksList(int UserId, int Id, string Name, List<Task> Tasks)
         {
             this.UserId = UserId;
             this.Id = Id;
             this.Name = Name;
+            this.Tasks = Tasks;
         }
 
     }
