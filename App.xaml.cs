@@ -1,7 +1,10 @@
 ﻿using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Windows;
+using TodoLista.Scripts;
 using TodoLista.Scripts.LoginScripts;
+using TodoLista.Scripts.Tasks;
 
 namespace TodoLista
 {
@@ -14,19 +17,32 @@ namespace TodoLista
         {
             base.OnStartup(e);
 
-            Window startupWindow = new LoginAndRegistrationWindow();
+            Window startupWindow;
 
-            /* if (LoginCurrentState.IsLoggedIn())
+            var (login, password) = LoginState.GetSavedLoginData();
+            if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(password) && DatabaseManager.TryLoginUserAutomatically(login, password))
             {
-                startupWindow = new MainWindow();
+                var user = DatabaseManager.GetUserData(login, password);
+                if (user != null)
+                {
+                    State.User = user;
+                    startupWindow = new MainWindow();
+                }
+                else
+                {
+                    startupWindow = new LoginAndRegistrationWindow();
+                }
             }
             else
             {
                 startupWindow = new LoginAndRegistrationWindow();
-            } */
+            }
+
 
             startupWindow.Show();
         }
-    }
+
+       
+}
 
 }

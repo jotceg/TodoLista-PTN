@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\
 TodoLista
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-E:\VisualStudioProjects\TodoLista\App.xaml
-3-481780399
+E:\TodoLista-PTN\App.xaml
+4-1866293742
 
-16-1991067232
-199356684183
-MainWindow.xaml;Scripts\LoginScripts\LoginAndRegistrationWindow.xaml;Scripts\Tasks\EditTaskWindow.xaml;
+17-795001758
+199-1299978300
+MainWindow.xaml;Scripts\LoginScripts\LoginAndRegistrationWindow.xaml;Scripts\Tasks\EditTaskWindow.xaml;Scripts\Tasks\MainMenuEditTaskWindow.xaml;
 
-False
+True
 

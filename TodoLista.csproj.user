@@ -13,6 +13,9 @@
     <Compile Update="Scripts\Tasks\EditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Scripts\LoginScripts\LoginAndRegistrationWindow.xaml">
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Scripts\Tasks\EditTaskWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

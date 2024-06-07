@@ -13,6 +13,7 @@ namespace TodoLista.Scripts.LoginScripts
 
         public static void SignOut()
         {
+            LoginState.ClearLoginDataState();
             User = null;
         }
     }

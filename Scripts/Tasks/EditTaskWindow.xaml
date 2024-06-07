@@ -50,17 +50,65 @@
         <Label Content="Hour:" HorizontalAlignment="Left" Margin="525,103,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="TimeMinutesComboBox" HorizontalAlignment="Left" Margin="696,107,0,0" VerticalAlignment="Top" Width="70">
             <ComboBoxItem>00</ComboBoxItem>
+            <ComboBoxItem>01</ComboBoxItem>
+            <ComboBoxItem>02</ComboBoxItem>
+            <ComboBoxItem>03</ComboBoxItem>
+            <ComboBoxItem>04</ComboBoxItem>
             <ComboBoxItem>05</ComboBoxItem>
+            <ComboBoxItem>06</ComboBoxItem>
+            <ComboBoxItem>07</ComboBoxItem>
+            <ComboBoxItem>08</ComboBoxItem>
+            <ComboBoxItem>09</ComboBoxItem>
             <ComboBoxItem>10</ComboBoxItem>
+            <ComboBoxItem>11</ComboBoxItem>
+            <ComboBoxItem>12</ComboBoxItem>
+            <ComboBoxItem>13</ComboBoxItem>
+            <ComboBoxItem>14</ComboBoxItem>
             <ComboBoxItem>15</ComboBoxItem>
+            <ComboBoxItem>16</ComboBoxItem>
+            <ComboBoxItem>17</ComboBoxItem>
+            <ComboBoxItem>18</ComboBoxItem>
+            <ComboBoxItem>19</ComboBoxItem>
             <ComboBoxItem>20</ComboBoxItem>
+            <ComboBoxItem>21</ComboBoxItem>
+            <ComboBoxItem>22</ComboBoxItem>
+            <ComboBoxItem>23</ComboBoxItem>
+            <ComboBoxItem>24</ComboBoxItem>
             <ComboBoxItem>25</ComboBoxItem>
+            <ComboBoxItem>26</ComboBoxItem>
+            <ComboBoxItem>27</ComboBoxItem>
+            <ComboBoxItem>28</ComboBoxItem>
+            <ComboBoxItem>29</ComboBoxItem>
             <ComboBoxItem>30</ComboBoxItem>
+            <ComboBoxItem>31</ComboBoxItem>
+            <ComboBoxItem>32</ComboBoxItem>
+            <ComboBoxItem>33</ComboBoxItem>
+            <ComboBoxItem>34</ComboBoxItem>
             <ComboBoxItem>35</ComboBoxItem>
+            <ComboBoxItem>36</ComboBoxItem>
+            <ComboBoxItem>37</ComboBoxItem>
+            <ComboBoxItem>38</ComboBoxItem>
+            <ComboBoxItem>39</ComboBoxItem>
             <ComboBoxItem>40</ComboBoxItem>
+            <ComboBoxItem>41</ComboBoxItem>
+            <ComboBoxItem>42</ComboBoxItem>
+            <ComboBoxItem>43</ComboBoxItem>
+            <ComboBoxItem>44</ComboBoxItem>
             <ComboBoxItem>45</ComboBoxItem>
+            <ComboBoxItem>46</ComboBoxItem>
+            <ComboBoxItem>47</ComboBoxItem>
+            <ComboBoxItem>48</ComboBoxItem>
+            <ComboBoxItem>49</ComboBoxItem>
             <ComboBoxItem>50</ComboBoxItem>
+            <ComboBoxItem>51</ComboBoxItem>
+            <ComboBoxItem>52</ComboBoxItem>
+            <ComboBoxItem>53</ComboBoxItem>
+            <ComboBoxItem>54</ComboBoxItem>
             <ComboBoxItem>55</ComboBoxItem>
+            <ComboBoxItem>56</ComboBoxItem>
+            <ComboBoxItem>57</ComboBoxItem>
+            <ComboBoxItem>58</ComboBoxItem>
+            <ComboBoxItem>59</ComboBoxItem>
         </ComboBox>
         <Label Content="Minutes" HorizontalAlignment="Left" Margin="646,106,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="PriorityComboBox" HorizontalAlignment="Left" Margin="52,54,0,0" VerticalAlignment="Top" Width="120">
@@ -70,6 +118,7 @@
         </ComboBox>
         <Label Content="ID" HorizontalAlignment="Left" Margin="77,119,0,0" VerticalAlignment="Top" Width="70"/>
         <Button x:Name="DeleteTaskBtn_Kopiuj" Content="Powrót do głownej" HorizontalAlignment="Left" Margin="621,332,0,0" VerticalAlignment="Top" Height="47" Width="112" Click="DeleteTaskBtn_Kopiuj_Click"/>
+        <Button x:Name="DeleteAllTasksBtn" Content="Delete All Task" HorizontalAlignment="Left" Margin="230,391,0,0" VerticalAlignment="Top" Height="27" Width="121" Click="DeleteAllTaskBtn_Click"/>
 
     </Grid>
 </Window>

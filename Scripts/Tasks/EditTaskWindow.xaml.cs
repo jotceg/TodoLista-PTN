@@ -22,6 +22,8 @@ namespace TodoLista.Scripts.Tasks
     /// </summary>
     public partial class EditTaskWindow : Window
     {
+        private static EditTaskWindow Instance;
+
         private OleDbConnection conn;
         private OleDbCommand cmd;
         private OleDbDataAdapter adapter;
@@ -43,6 +45,26 @@ namespace TodoLista.Scripts.Tasks
             InitializeComponent();
 
             GetTimeTableData();
+
+            this.Closed += EditTaskWindow_Closed;
+        }
+
+        public static void ShowWindow()
+        {
+            if (Instance == null)
+            {
+                Instance = new EditTaskWindow();
+                Instance.Show();
+            }
+            else
+            {
+                Instance.Activate();
+            }
+        }
+
+        private void EditTaskWindow_Closed(object sender, EventArgs e)
+        {
+            Instance = null;
         }
 
         public void RetrieveUserData()
@@ -130,10 +152,25 @@ namespace TodoLista.Scripts.Tasks
             }
 
             State.User = new User(userId, userLogin, userPassword, tasksLists);
+            MainWindow.Instance.LoadTasksForSelectedList();
         }
 
         private void AddTask(string priority, string title, string description, DateTime date)
         {
+
+
+            if (date <= DateTime.Now)
+            {
+                MessageBox.Show("Nie można wybrać daty z przeszłości.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (DatabaseManager.DoesTaskNameAlreadyExist(State.SelectedTasksListId, title))
+            {
+                MessageBox.Show("Zadanie o takiej nazwie już istnieje!", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             using (conn = new OleDbConnection(connectionAndDataString))
             {
                 string query = "INSERT INTO Tasks (ListId, Title, Description, Priority, RealizationDate) VALUES (@ListId, @Title, @Description, @Priority, @RealizationDate)";
@@ -150,8 +187,25 @@ namespace TodoLista.Scripts.Tasks
                     cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase
                 }
             }
+            ClearUI();
 
             RetrieveUserData();
+            MessageBox.Show($"Wprowadzono zadanie!");
+            
+            MainWindow.Instance.LoadTasksForSelectedList();
+            
+           
+           
+        }
+
+        private void ClearUI()
+        {
+            PriorityComboBox.SelectedIndex = -1; 
+            TitleTextBox.Clear(); 
+            DescriptionTextBox.Clear();
+            DatePickerBtn.SelectedDate = null;
+            TimeHourComboBox.SelectedIndex = -1;
+            TimeMinutesComboBox.SelectedIndex = -1; 
         }
 
         public void MarkAsCompleted(int id)
@@ -197,9 +251,7 @@ namespace TodoLista.Scripts.Tasks
             DateTime? date = DatePickerBtn.SelectedDate;
 
 
-            int hour = TimeHourComboBox.SelectedIndex;
-            int minute = TimeMinutesComboBox.SelectedIndex;
-
+            
 
             if (string.IsNullOrWhiteSpace(priority) || string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(description) || date == null)
             {
@@ -208,17 +260,26 @@ namespace TodoLista.Scripts.Tasks
             }
 
 
-            if (hour == -1 || minute == -1)
+            if (TimeHourComboBox.SelectedItem == null || TimeMinutesComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Wybierz godzinę i minutę realizacji zadania!");
                 return;
             }
+            int hour = int.Parse((TimeHourComboBox.SelectedItem as ComboBoxItem).Content.ToString());
+            int minute = int.Parse((TimeMinutesComboBox.SelectedItem as ComboBoxItem).Content.ToString());
 
 
             DateTime dateAndTime = date.Value.AddHours(hour).AddMinutes(minute);
 
+            if (dateAndTime <= DateTime.Now)
+            {
+                MessageBox.Show("Nie można wybrać godziny z przeszłości.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             AddTask(priority, title, description, dateAndTime);
-            MessageBox.Show($"Wprowadzono zadanie!");
+
+            
         }
 
         private void DeleteTaskBtn_Click(object sender, RoutedEventArgs e)
@@ -228,6 +289,42 @@ namespace TodoLista.Scripts.Tasks
                 int id = int.Parse(DeleteTextBox.Text);
                 DeleteTask(id);
                 MessageBox.Show($"Usunięto Zadanie!");
+
+                ClearUI();
+
+                this.Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Podaj poprawne Id zadania.");
+            }
+        }
+        private void DeleteAllTasks()
+        {
+            conn = new OleDbConnection(connectionAndDataString);
+            
+
+            string query = "DELETE FROM Tasks";
+
+            cmd = new OleDbCommand(query, conn);
+
+            MessageBox.Show("Wszystkie zadania Usunięte!");
+
+            conn.Open(); // Open Connetction With DataBase
+            cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase
+            conn.Close(); // Close Connetction With DataBase
+        }
+
+        private void DeleteAllTaskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                
+                DeleteAllTasks();
+                MessageBox.Show($"Usunięto Zadanie!");
+
+                ClearUI();
+
                 this.Close();
             }
             catch (FormatException)
@@ -272,7 +369,7 @@ namespace TodoLista.Scripts.Tasks
             return taskCount > 0;
         }
 
-        private void GetTimeTableData()
+        public void GetTimeTableData()
         {
 
             conn = new OleDbConnection(connectionAndDataString);
@@ -288,9 +385,9 @@ namespace TodoLista.Scripts.Tasks
 
         private void DeleteTaskBtn_Kopiuj_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            Close();
-            mainWindow.Show();
+
+            this.Close();
+           
         }
     }
 }

@@ -99,6 +99,7 @@ namespace TodoLista
         }
         private bool DoesUserExist(string name)
         {
+            name = name.Trim(); // Do not take into account spaces in login 
             conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
             string query = "SELECT COUNT(*) FROM Users WHERE  StrComp(Name ,@Name,0) = 0";
 
@@ -114,6 +115,8 @@ namespace TodoLista
         }
         private bool CheckPassword(string userName, string password)
         {
+            userName = userName.Trim();  // Do not take into account spaces in login 
+
             conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
 
             string query = "SELECT COUNT(*) FROM Users WHERE  StrComp(Name, @Name,0) = 0 AND  StrComp(UserPassword ,@UserPassword, 0) = 0";
@@ -155,6 +158,11 @@ namespace TodoLista
                 }
             }
 
+            ImplementUserData(userId, userLogin, userPassword);
+        }
+
+        public void ImplementUserData(int userId, string userLogin, string userPassword)
+        {
             List<TasksList> tasksLists = new List<TasksList>();
 
             using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
@@ -230,10 +238,17 @@ namespace TodoLista
             MessageBox.Show("Wyczyszczono bazę danych");
         }
 
+        private void ClearLoginDataState()
+        {
+            LoginState.ClearLoginDataState();
+            MessageBox.Show("Wyczyszczono bazę danych LoginState.txt");
+        }
+
+
         //Button Logic
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            string login = LoginTextBox.Text;
+            string login = LoginTextBox.Text.Trim(); 
             string password = PasswordBox.Password;
 
             if (string.IsNullOrWhiteSpace(login) && string.IsNullOrWhiteSpace(password))
@@ -282,7 +297,7 @@ namespace TodoLista
 
         private void RegisterBtn_Click(object sender, RoutedEventArgs e)
         {
-            string login = LoginTextBox.Text; //Login Input
+            string login = LoginTextBox.Text.Trim(); ; //Login Input
             string password = PasswordBox.Password; // Password Input
 
             if (string.IsNullOrWhiteSpace(login) && string.IsNullOrWhiteSpace(password))
@@ -326,6 +341,11 @@ namespace TodoLista
         private void ClearDataBtn_Click(object sender, RoutedEventArgs e)
         {
             ClearData();
+        }
+
+        private void ClearLoginStateDataBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClearLoginDataState();
         }
     }
 }

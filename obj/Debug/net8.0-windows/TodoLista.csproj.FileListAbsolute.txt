@@ -91,3 +91,5 @@ E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\EditTas
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.CopyComplete
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.baml

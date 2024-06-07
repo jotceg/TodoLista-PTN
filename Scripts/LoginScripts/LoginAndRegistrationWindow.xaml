@@ -17,5 +17,6 @@
         <Label Content="Użytkownicy Z bazy" HorizontalAlignment="Left" Margin="464,105,0,0" VerticalAlignment="Top" Height="34" Width="145"/>
         <Button x:Name="ClearDataBtn" Content="ClearDataBtn" HorizontalAlignment="Left" Margin="476,395,0,0" VerticalAlignment="Top" Height="29" Width="133" Click="ClearDataBtn_Click"/>
         <CheckBox x:Name="RememberMyDataCheckBox" Content="Pamiętaj moje dane" HorizontalAlignment="Left" Margin="34,170,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ClearDataBtn_Copy" Content="ClearLoginStateData" HorizontalAlignment="Center" Margin="0,395,0,0" VerticalAlignment="Top" Height="29" Width="132" Click="ClearLoginStateDataBtn_Click"/>
     </Grid>
 </Window>
