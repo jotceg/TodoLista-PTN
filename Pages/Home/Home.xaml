@@ -40,7 +40,7 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Uid="{Binding Id}" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="Transparent">
-                                    <TextBlock TextAlignment="Center" Width="300" Text="{Binding Title}" VerticalAlignment="Center"/>
+                                    <TextBlock TextAlignment="Left" Width="300" Text="{Binding Title}" VerticalAlignment="Center"/>
                                     <Button Click="DeleteTaskBtn_Click" Background="Red" Content="Usuń" Margin="25,0,25,0"/>
                                     <CheckBox x:Name="TaskDoneCheckBox" FontSize="24" VerticalAlignment="Center" Checked="TaskDoneCheckBox_Checked"/>
                                     <StackPanel.ContextMenu>
@@ -56,7 +56,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddButton" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,10,10" Click="AddButton_Click">
+        <Button x:Name="AddButton" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,0,10" Click="AddButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
@@ -73,7 +73,7 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="UserNameTextBox" Background="Transparent" BorderBrush="Transparent" FontFamily="Bahnschrift" Text="Witaj, " IsReadOnly="True" HorizontalAlignment="Stretch" Margin="80,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="17" MaxHeight="60" Grid.Column="0" TextAlignment="Center"/>
-        <ItemsControl x:Name="TasksListsItemsControl" Margin="10,100,10,10" FontSize="15" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" ItemsSource="{Binding tasksLists}" Grid.RowSpan="2">
+        <ItemsControl x:Name="TasksListsItemsControl" Margin="10,100,10,35" FontSize="15" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" ItemsSource="{Binding tasksLists}" Grid.RowSpan="2">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Uid="{Binding Id}" Click="OpenTasksList" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="{Binding Name}">
@@ -87,11 +87,11 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <Button x:Name="AddTasksListButton" Height="25" Content="Dodaj listę" Background="LightGreen" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10, 0, 10, 10" Click="AddTasksListButton_Click"/>
+        <Button x:Name="AddTasksListButton" FontFamily="Bahnschrift" FontSize="20" Height="25" Content="Dodaj listę" Background="LightGreen" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10, 0, 10, 10" Click="AddTasksListButton_Click"/>
         <Button x:Name="OpenLoginWindowBtn" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="White" Margin="10,10,10,0" Height="20" Click="SignOut">
             <TextBlock x:Name="OpenLoginWindowBtnTextBox" Text="Wyloguj się" HorizontalAlignment="Center" FontSize="14" Background="Transparent" FontFamily="Bahnschrift" VerticalAlignment="Top" TextAlignment="Center" TextWrapping="Wrap" Height="24" IsEnabled="False" />
         </Button>
         <TextBox x:Name="SideTitleTextBox" Background="Transparent" BorderBrush="Transparent" Text="Twoje listy zadań" IsReadOnly="True" HorizontalAlignment="Stretch" Margin="10,71,10,0" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" Grid.Column="0" FontFamily="Bahnschrift"/>
-        <Button x:Name="SidePanelButton" Grid.Column="1" Height="20" Width="15" VerticalContentAlignment="Top" Content="&lt;" FontSize="13" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" Click="SidePanelButton_Click"/>
+        <Button x:Name="SidePanelButton" Grid.Column="1" Height="20" Width="15" VerticalContentAlignment="Top" Content="&lt;" FontSize="15" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" Click="SidePanelButton_Click"/>
     </Grid>
 </Page>

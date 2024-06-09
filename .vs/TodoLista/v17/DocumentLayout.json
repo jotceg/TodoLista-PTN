@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\registrationandlogin\\registrationandlogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\registrationandlogin\\registrationandlogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\scripts\\tasks\\mainmenuedittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\tasks\\mainmenuedittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\registrationandlogin\\registrationandlogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\registrationandlogin\\registrationandlogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\edittask\\edittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml.cs",
               "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
               "RelativeToolTip": "Pages\\Home\\Home.xaml.cs",
-              "ViewState": "AQIAACoBAAAAAAAAAAAAAD8BAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAACEAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T11:39:27.969Z",
               "EditorCaption": ""
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainMenuEditTaskWindow.xaml",
               "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Scripts\\Tasks\\MainMenuEditTaskWindow.xaml",
               "RelativeDocumentMoniker": "Scripts\\Tasks\\MainMenuEditTaskWindow.xaml",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RegistrationAndLogin.xaml",
               "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\RegistrationAndLogin\\RegistrationAndLogin.xaml",
               "RelativeDocumentMoniker": "Pages\\RegistrationAndLogin\\RegistrationAndLogin.xaml",

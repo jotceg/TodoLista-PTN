@@ -317,7 +317,7 @@ namespace TodoLista.Pages.Home
 
         private void UserImageButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 

@@ -10,6 +10,16 @@
 
   <ItemGroup>
     <None Remove="Images\Core\PlusSign.png" />
+    <None Remove="Images\User\c1.png" />
+    <None Remove="Images\User\c2.png" />
+    <None Remove="Images\User\c3.png" />
+    <None Remove="Images\User\c4.png" />
+    <None Remove="Images\User\c5.png" />
+    <None Remove="Images\User\d1.png" />
+    <None Remove="Images\User\d2.png" />
+    <None Remove="Images\User\d3.png" />
+    <None Remove="Images\User\d4.png" />
+    <None Remove="Images\User\d5.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +43,16 @@
 
   <ItemGroup>
     <Resource Include="Images\Core\PlusSign.png" />
+    <Resource Include="Images\User\c1.png" />
+    <Resource Include="Images\User\c2.png" />
+    <Resource Include="Images\User\c3.png" />
+    <Resource Include="Images\User\c4.png" />
+    <Resource Include="Images\User\c5.png" />
+    <Resource Include="Images\User\d1.png" />
+    <Resource Include="Images\User\d2.png" />
+    <Resource Include="Images\User\d3.png" />
+    <Resource Include="Images\User\d4.png" />
+    <Resource Include="Images\User\d5.png" />
   </ItemGroup>
 
 </Project>
