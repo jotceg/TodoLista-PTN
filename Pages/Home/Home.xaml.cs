@@ -17,6 +17,7 @@ using TodoLista.Scripts.LoginScripts;
 using TodoLista.Scripts.Tasks;
 using TodoLista.Scripts;
 using TodoLista.Windows.EditTask;
+using TodoLista.Windows;
 
 namespace TodoLista.Pages.Home
 {
@@ -298,6 +299,25 @@ namespace TodoLista.Pages.Home
                     }
                 }
             }
+        }
+
+        private void SidePanelButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Equals(SidePanelButton.Content, "<"))
+            {
+                Sidebar.Width = new GridLength(0, GridUnitType.Star);
+                SidePanelButton.Content = ">";
+            }
+            else
+            {
+                Sidebar.Width = new GridLength(2, GridUnitType.Star);
+                SidePanelButton.Content = "<";
+            }
+        }
+
+        private void UserImageButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 

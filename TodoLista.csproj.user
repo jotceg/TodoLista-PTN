@@ -19,6 +19,9 @@
     <Compile Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\UserImage\UserImageWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\Home\Home.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\UserImage\UserImageWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
