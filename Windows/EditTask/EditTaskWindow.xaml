@@ -7,114 +7,135 @@
         mc:Ignorable="d"
         Title="EditTaskWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="AddTaskBtn" Content="Dodaj zadanie" HorizontalAlignment="Left" Margin="230,107,0,0" VerticalAlignment="Top" Height="47" Width="112" Click="AddTaskBtn_Click"/>
-        <TextBox  x:Name="TitleTextBox" HorizontalAlignment="Left" Margin="231,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox  x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="400,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Priorytet" HorizontalAlignment="Left" Margin="74,15,0,0" VerticalAlignment="Top" Width="68"/>
-        <Label Content="Nazwa zadania" HorizontalAlignment="Left" Margin="256,15,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.7,0.541"/>
-        <Label Content="Opis (opcjonalny)" HorizontalAlignment="Left" Margin="400,15,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Data realizacji (opcjonalna)" HorizontalAlignment="Left" Margin="560,15,0,0" VerticalAlignment="Top" Width="165"/>
-        <Button x:Name="MarkAsCompletedTaskBtn" Content="Zaznacz ukończenie zadania" HorizontalAlignment="Left" Margin="32,176,0,0" VerticalAlignment="Top" Height="47" Width="160" Click="MarkAsCompletedTaskBtn_Click"/>
-        <TextBox x:Name="MarkAsCompletedTaskTextBox" HorizontalAlignment="Left" Margin="48,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <DataGrid x:Name="DataBase" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="48,228,238,25"/>
-        <DatePicker x:Name="DatePickerBtn" HorizontalAlignment="Left" Margin="591,64,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="TimeHourComboBox" HorizontalAlignment="Left" Margin="568,107,0,0" VerticalAlignment="Top" Width="70">
-            <ComboBoxItem>00</ComboBoxItem>
-            <ComboBoxItem>01</ComboBoxItem>
-            <ComboBoxItem>02</ComboBoxItem>
-            <ComboBoxItem>03</ComboBoxItem>
-            <ComboBoxItem>04</ComboBoxItem>
-            <ComboBoxItem>05</ComboBoxItem>
-            <ComboBoxItem>06</ComboBoxItem>
-            <ComboBoxItem>07</ComboBoxItem>
-            <ComboBoxItem>08</ComboBoxItem>
-            <ComboBoxItem>09</ComboBoxItem>
-            <ComboBoxItem>10</ComboBoxItem>
-            <ComboBoxItem>11</ComboBoxItem>
-            <ComboBoxItem>12</ComboBoxItem>
-            <ComboBoxItem>13</ComboBoxItem>
-            <ComboBoxItem>14</ComboBoxItem>
-            <ComboBoxItem>15</ComboBoxItem>
-            <ComboBoxItem>16</ComboBoxItem>
-            <ComboBoxItem>17</ComboBoxItem>
-            <ComboBoxItem>18</ComboBoxItem>
-            <ComboBoxItem>19</ComboBoxItem>
-            <ComboBoxItem>20</ComboBoxItem>
-            <ComboBoxItem>21</ComboBoxItem>
-            <ComboBoxItem>22</ComboBoxItem>
-            <ComboBoxItem>23</ComboBoxItem>
-        </ComboBox>
-        <Label Content="Godzina:" HorizontalAlignment="Left" Margin="494,105,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="TimeMinutesComboBox" HorizontalAlignment="Left" Margin="696,107,0,0" VerticalAlignment="Top" Width="70">
-            <ComboBoxItem>00</ComboBoxItem>
-            <ComboBoxItem>01</ComboBoxItem>
-            <ComboBoxItem>02</ComboBoxItem>
-            <ComboBoxItem>03</ComboBoxItem>
-            <ComboBoxItem>04</ComboBoxItem>
-            <ComboBoxItem>05</ComboBoxItem>
-            <ComboBoxItem>06</ComboBoxItem>
-            <ComboBoxItem>07</ComboBoxItem>
-            <ComboBoxItem>08</ComboBoxItem>
-            <ComboBoxItem>09</ComboBoxItem>
-            <ComboBoxItem>10</ComboBoxItem>
-            <ComboBoxItem>11</ComboBoxItem>
-            <ComboBoxItem>12</ComboBoxItem>
-            <ComboBoxItem>13</ComboBoxItem>
-            <ComboBoxItem>14</ComboBoxItem>
-            <ComboBoxItem>15</ComboBoxItem>
-            <ComboBoxItem>16</ComboBoxItem>
-            <ComboBoxItem>17</ComboBoxItem>
-            <ComboBoxItem>18</ComboBoxItem>
-            <ComboBoxItem>19</ComboBoxItem>
-            <ComboBoxItem>20</ComboBoxItem>
-            <ComboBoxItem>21</ComboBoxItem>
-            <ComboBoxItem>22</ComboBoxItem>
-            <ComboBoxItem>23</ComboBoxItem>
-            <ComboBoxItem>24</ComboBoxItem>
-            <ComboBoxItem>25</ComboBoxItem>
-            <ComboBoxItem>26</ComboBoxItem>
-            <ComboBoxItem>27</ComboBoxItem>
-            <ComboBoxItem>28</ComboBoxItem>
-            <ComboBoxItem>29</ComboBoxItem>
-            <ComboBoxItem>30</ComboBoxItem>
-            <ComboBoxItem>31</ComboBoxItem>
-            <ComboBoxItem>32</ComboBoxItem>
-            <ComboBoxItem>33</ComboBoxItem>
-            <ComboBoxItem>34</ComboBoxItem>
-            <ComboBoxItem>35</ComboBoxItem>
-            <ComboBoxItem>36</ComboBoxItem>
-            <ComboBoxItem>37</ComboBoxItem>
-            <ComboBoxItem>38</ComboBoxItem>
-            <ComboBoxItem>39</ComboBoxItem>
-            <ComboBoxItem>40</ComboBoxItem>
-            <ComboBoxItem>41</ComboBoxItem>
-            <ComboBoxItem>42</ComboBoxItem>
-            <ComboBoxItem>43</ComboBoxItem>
-            <ComboBoxItem>44</ComboBoxItem>
-            <ComboBoxItem>45</ComboBoxItem>
-            <ComboBoxItem>46</ComboBoxItem>
-            <ComboBoxItem>47</ComboBoxItem>
-            <ComboBoxItem>48</ComboBoxItem>
-            <ComboBoxItem>49</ComboBoxItem>
-            <ComboBoxItem>50</ComboBoxItem>
-            <ComboBoxItem>51</ComboBoxItem>
-            <ComboBoxItem>52</ComboBoxItem>
-            <ComboBoxItem>53</ComboBoxItem>
-            <ComboBoxItem>54</ComboBoxItem>
-            <ComboBoxItem>55</ComboBoxItem>
-            <ComboBoxItem>56</ComboBoxItem>
-            <ComboBoxItem>57</ComboBoxItem>
-            <ComboBoxItem>58</ComboBoxItem>
-            <ComboBoxItem>59</ComboBoxItem>
-        </ComboBox>
-        <Label Content="Minuta" HorizontalAlignment="Left" Margin="642,105,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="PriorityComboBox" HorizontalAlignment="Left" Margin="52,54,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem>Niski</ComboBoxItem>
-            <ComboBoxItem>Średni</ComboBoxItem>
-            <ComboBoxItem>Wysoki</ComboBoxItem>
-        </ComboBox>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="96,114,0,0" VerticalAlignment="Top" Width="24"/>
-        <Button x:Name="DeleteAllTasksBtn" Content="Usuń wszystkie zadania" HorizontalAlignment="Left" Margin="48,0,0,25" VerticalAlignment="Bottom" Height="27" Width="152" Click="DeleteAllTaskBtn_Click"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="4" Opacity="0.8">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Aquamarine" Offset="0.0"/>
+                    <GradientStop Color="Bisque" Offset="0.25"/>
+                    <GradientStop Color="Coral" Offset="0.50"/>
+                    <GradientStop Color="DarkGoldenrod" Offset="0.75"/>
+                    <GradientStop Color="ForestGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel Margin="10,10,10,10" Grid.ColumnSpan="2">
+            <Label Content="Nazwa zadania*:" FontSize="25" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <TextBox  x:Name="TitleTextBox" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Label Content="Opis:" FontSize="25" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <TextBox  x:Name="DescriptionTextBox" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel Margin="10,140,10,10" Grid.Column="0">
+            <Label Content="Data realizacji*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <DatePicker x:Name="DatePickerBtn" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <Label Content="Godzina*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <ComboBox x:Name="TimeHourComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <ComboBoxItem>00</ComboBoxItem>
+                <ComboBoxItem>01</ComboBoxItem>
+                <ComboBoxItem>02</ComboBoxItem>
+                <ComboBoxItem>03</ComboBoxItem>
+                <ComboBoxItem>04</ComboBoxItem>
+                <ComboBoxItem>05</ComboBoxItem>
+                <ComboBoxItem>06</ComboBoxItem>
+                <ComboBoxItem>07</ComboBoxItem>
+                <ComboBoxItem>08</ComboBoxItem>
+                <ComboBoxItem>09</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+                <ComboBoxItem>17</ComboBoxItem>
+                <ComboBoxItem>18</ComboBoxItem>
+                <ComboBoxItem>19</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>21</ComboBoxItem>
+                <ComboBoxItem>22</ComboBoxItem>
+                <ComboBoxItem>23</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Minuta*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <ComboBox x:Name="TimeMinutesComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <ComboBoxItem>00</ComboBoxItem>
+                <ComboBoxItem>01</ComboBoxItem>
+                <ComboBoxItem>02</ComboBoxItem>
+                <ComboBoxItem>03</ComboBoxItem>
+                <ComboBoxItem>04</ComboBoxItem>
+                <ComboBoxItem>05</ComboBoxItem>
+                <ComboBoxItem>06</ComboBoxItem>
+                <ComboBoxItem>07</ComboBoxItem>
+                <ComboBoxItem>08</ComboBoxItem>
+                <ComboBoxItem>09</ComboBoxItem>
+                <ComboBoxItem>10</ComboBoxItem>
+                <ComboBoxItem>11</ComboBoxItem>
+                <ComboBoxItem>12</ComboBoxItem>
+                <ComboBoxItem>13</ComboBoxItem>
+                <ComboBoxItem>14</ComboBoxItem>
+                <ComboBoxItem>15</ComboBoxItem>
+                <ComboBoxItem>16</ComboBoxItem>
+                <ComboBoxItem>17</ComboBoxItem>
+                <ComboBoxItem>18</ComboBoxItem>
+                <ComboBoxItem>19</ComboBoxItem>
+                <ComboBoxItem>20</ComboBoxItem>
+                <ComboBoxItem>21</ComboBoxItem>
+                <ComboBoxItem>22</ComboBoxItem>
+                <ComboBoxItem>23</ComboBoxItem>
+                <ComboBoxItem>24</ComboBoxItem>
+                <ComboBoxItem>25</ComboBoxItem>
+                <ComboBoxItem>26</ComboBoxItem>
+                <ComboBoxItem>27</ComboBoxItem>
+                <ComboBoxItem>28</ComboBoxItem>
+                <ComboBoxItem>29</ComboBoxItem>
+                <ComboBoxItem>30</ComboBoxItem>
+                <ComboBoxItem>31</ComboBoxItem>
+                <ComboBoxItem>32</ComboBoxItem>
+                <ComboBoxItem>33</ComboBoxItem>
+                <ComboBoxItem>34</ComboBoxItem>
+                <ComboBoxItem>35</ComboBoxItem>
+                <ComboBoxItem>36</ComboBoxItem>
+                <ComboBoxItem>37</ComboBoxItem>
+                <ComboBoxItem>38</ComboBoxItem>
+                <ComboBoxItem>39</ComboBoxItem>
+                <ComboBoxItem>40</ComboBoxItem>
+                <ComboBoxItem>41</ComboBoxItem>
+                <ComboBoxItem>42</ComboBoxItem>
+                <ComboBoxItem>43</ComboBoxItem>
+                <ComboBoxItem>44</ComboBoxItem>
+                <ComboBoxItem>45</ComboBoxItem>
+                <ComboBoxItem>46</ComboBoxItem>
+                <ComboBoxItem>47</ComboBoxItem>
+                <ComboBoxItem>48</ComboBoxItem>
+                <ComboBoxItem>49</ComboBoxItem>
+                <ComboBoxItem>50</ComboBoxItem>
+                <ComboBoxItem>51</ComboBoxItem>
+                <ComboBoxItem>52</ComboBoxItem>
+                <ComboBoxItem>53</ComboBoxItem>
+                <ComboBoxItem>54</ComboBoxItem>
+                <ComboBoxItem>55</ComboBoxItem>
+                <ComboBoxItem>56</ComboBoxItem>
+                <ComboBoxItem>57</ComboBoxItem>
+                <ComboBoxItem>58</ComboBoxItem>
+                <ComboBoxItem>59</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Margin="10,140,10,10" Grid.Column="1">
+            <Label Content="Priorytet*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <ComboBox x:Name="PriorityComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <ComboBoxItem>Niski</ComboBoxItem>
+                <ComboBoxItem>Średni</ComboBoxItem>
+                <ComboBoxItem>Wysoki</ComboBoxItem>
+            </ComboBox>
+            <Label Content="ID (Ukończenie*):" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <TextBox x:Name="MarkAsCompletedTaskTextBox" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <Button x:Name="AddTaskBtn" Content="Dodaj zadanie" HorizontalAlignment="Stretch" FontSize="20" FontFamily="Bahnschrift" Margin="10,0,10,10" VerticalAlignment="Bottom" Click="AddTaskBtn_Click" Grid.Column="0"/>
+        <Button x:Name="MarkAsCompletedTaskBtn" Content="Ukończ zadanie" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" Margin="10,0,10,10" VerticalAlignment="Bottom" Click="MarkAsCompletedTaskBtn_Click" Grid.Column="1"/>
+        <DataGrid x:Name="DataBase" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,10,40" Grid.Column="2"/>
+        <Button x:Name="DeleteAllTasksBtn" Content="Usuń wszystkie zadania" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" FontSize="20" Margin="10,0,10,10" VerticalAlignment="Bottom" Click="DeleteAllTaskBtn_Click" Grid.Column="2"/>
     </Grid>
 </Window>
