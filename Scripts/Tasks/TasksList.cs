@@ -10,9 +10,9 @@ namespace TodoLista.Scripts.Tasks
     {
         public int UserId { get; }
         public int Id { get; }
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public List<Task> Tasks { get; set; }
+        public List<Task> Tasks { get; private set; }
 
         public TasksList(int UserId, int Id, string Name, List<Task> Tasks)
         {

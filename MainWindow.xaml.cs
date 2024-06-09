@@ -12,6 +12,8 @@ using TodoLista.Scripts.Tasks;
 using TodoLista.Scripts.LoginScripts;
 using Microsoft.VisualBasic;
 using TodoLista.Scripts;
+using TodoLista.Pages.Home;
+using TodoLista.Pages.RegistrationAndLogin;
 
 namespace TodoLista
 {
@@ -19,60 +21,47 @@ namespace TodoLista
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     ///
-    
+
     public partial class MainWindow : Window
     {
-        public List<TasksList> tasksLists = State.User.TasksLists;
+        public Frame NavigationFrame;
+
         public MainWindow()
         {
             InitializeComponent();
+            Width = SystemParameters.PrimaryScreenWidth;
+            Height = SystemParameters.PrimaryScreenHeight - SystemParameters.WindowCaptionHeight;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            WindowState = WindowState.Maximized;
+            DataContext = new MainViewModel();
+            NavigationFrame = MainFrame;
 
-            TasksListsItemsControl.ItemsSource = tasksLists;
-            
-            UserNameTextBox.Text += State.User.Login;
-        }
+            var (login, password) = LoginState.GetSavedLoginData();
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            EditTaskWindow editTaskWindow = new EditTaskWindow();
-            editTaskWindow.Show();
-            Close();
-        }
-
-        private void SignOut(object sender, RoutedEventArgs e)
-        {
-            LoginAndRegistrationWindow loginAndRegistrationWindow = new LoginAndRegistrationWindow();
-            loginAndRegistrationWindow.Show();
-            State.SignOut();
-            Close();
-        }
-
-        private void OpenTasksList(object sender, RoutedEventArgs e)
-        {
-            Button clickedButton = (Button)sender;
-            int id = int.Parse(clickedButton.Uid);
-            State.SelectedTasksListId = id;
-            TasksListBox.Items.Clear();
-            foreach (TasksList tasksList in tasksLists)
+            if (!string.IsNullOrEmpty(login) && !string.IsNullOrEmpty(password) && DatabaseManager.TryLoginUserAutomatically(login, password))
             {
-                if (tasksList.Id == State.SelectedTasksListId)
+                var user = DatabaseManager.GetUserData(login, password);
+
+                if (user != null)
                 {
-                    foreach (Scripts.Tasks.Task task in tasksList.Tasks)
-                    {
-                        TasksListBox.Items.Add(task.Title);
-                    };
-                    break;
+                    State.User = user;
+                    MainFrame.Navigate(new Home());
                 }
+                else
+                {
+                    MainFrame.Navigate(new RegistrationAndLogin());
+                };
             }
+            else
+            {
+                MainFrame.Navigate(new RegistrationAndLogin());
+            };
         }
 
-        private void AddTasksListButton_Click(object sender, RoutedEventArgs e)
+        public void NavigateTo(Page page)
         {
-            string newTasksListName = Interaction.InputBox("Wpisz nazwę listy zadań", "Dodawanie listy zadań", "");
+            MainFrame.Navigate(page);
             
-            DatabaseManager.AddTasksList(State.User.Id, newTasksListName);
-            new MainWindow().Show();
-            Close();
         }
     }
 }

@@ -11,21 +11,36 @@ namespace TodoLista.Scripts.LoginScripts
     {
         private static readonly string FilePath = "LoginState.txt";
 
-        public static bool IsLoggedIn()
-        {
-            if (!File.Exists(FilePath))
-                return false;
-
-            string content = File.ReadAllText(FilePath);
-            return bool.TryParse(content, out bool isLoggedIn) && isLoggedIn;
-        }
-
         public static void SaveLoginData(string login, string password)
         {
             using (StreamWriter writer = new StreamWriter(FilePath))
             {
                 writer.WriteLine($"User: {login}");
                 writer.WriteLine($"UserPassword: {password}");
+            }
+        }
+
+        public static (string login, string password) GetSavedLoginData()
+        {
+            if (!File.Exists(FilePath))
+                return (null, null);
+
+            string[] lines = File.ReadAllLines(FilePath);
+            if (lines.Length >= 2)
+            {
+                string login = lines[0].Split(':')[1].Trim();
+                string password = lines[1].Split(':')[1].Trim();
+                return (login, password);
+            }
+
+            return (null, null);
+        }
+
+        public static void ClearLoginDataState()
+        {
+            if (File.Exists(FilePath))
+            {
+                File.WriteAllText(FilePath, string.Empty);
             }
         }
     }

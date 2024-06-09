@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 E:\VisualStudioProjects\TodoLista\App.xaml
-3-481780399
+5-1456420355
 
-142099245679
+18-451528581
 199356684183
-MainWindow.xaml;Scripts\LoginScripts\LoginAndRegistrationWindow.xaml;Scripts\Tasks\EditTaskWindow.xaml;
+MainWindow.xaml;Pages\Home\Home.xaml;Pages\RegistrationAndLogin\RegistrationAndLogin.xaml;Scripts\Tasks\MainMenuEditTaskWindow.xaml;Windows\EditTask\EditTaskWindow.xaml;
 
 False
 

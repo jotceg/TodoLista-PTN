@@ -7,21 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Scripts\LoginScripts\LoginAndRegistrationWindow.xaml.cs">
+    <Compile Update="Pages\Home\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Scripts\Tasks\EditTaskWindow.xaml.cs">
+    <Compile Update="Pages\RegistrationAndLogin\RegistrationAndLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\EditTask\EditTaskWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Scripts\LoginScripts\LoginAndRegistrationWindow.xaml">
+    <Page Update="Pages\Home\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\RegistrationAndLogin\RegistrationAndLogin.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Scripts\Tasks\EditTaskWindow.xaml">
+    <Page Update="Windows\EditTask\EditTaskWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
