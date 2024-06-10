@@ -13,7 +13,7 @@ using TodoLista.Scripts.LoginScripts;
 using Microsoft.VisualBasic;
 using TodoLista.Scripts;
 using TodoLista.Pages.Home;
-using TodoLista.Pages.RegistrationAndLogin;
+using TodoLista.Pages.Login;
 
 namespace TodoLista
 {
@@ -49,12 +49,12 @@ namespace TodoLista
                 }
                 else
                 {
-                    MainFrame.Navigate(new RegistrationAndLogin());
+                    MainFrame.Navigate(new Login());
                 };
             }
             else
             {
-                MainFrame.Navigate(new RegistrationAndLogin());
+                MainFrame.Navigate(new Login());
             };
         }
 

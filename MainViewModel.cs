@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using TodoLista.Pages.Home;
-using TodoLista.Pages.RegistrationAndLogin;
+using TodoLista.Pages.Login;
 
 namespace TodoLista
 {
@@ -28,7 +28,7 @@ namespace TodoLista
                         ((MainWindow)App.Current.MainWindow).NavigateTo(new Home());
                         break;
                     case "RegistrationAndLogin":
-                        ((MainWindow)App.Current.MainWindow).NavigateTo(new RegistrationAndLogin());
+                        ((MainWindow)App.Current.MainWindow).NavigateTo(new Login());
                         break;
                 }
             }

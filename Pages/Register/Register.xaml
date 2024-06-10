@@ -1,0 +1,48 @@
+﻿<Page x:Class="TodoLista.Pages.Register.Register"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TodoLista.Pages.Home"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Register"
+      >
+    <Grid Background="White">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <Label Content="TodoLista" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Bahnschrift" />
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0, 24, 0, 0">
+                <Label Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Bahnschrift" FontSize="24" />
+                <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Width="160" FontFamily="Bahnschrift" FontSize="24" Margin="24, 0, 0, 0" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0, 12, 0, 0">
+                <Label Content="Hasło" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Bahnschrift" FontSize="24" />
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal" Margin="24, 0, 0, 0">
+                    <PasswordBox PasswordChanged="PasswordTextBox_PasswordChanged" x:Name="PasswordTextBox" HorizontalAlignment="Left" VerticalAlignment="Center" Width="160" FontFamily="Bahnschrift" FontSize="24" />
+                    <TextBox TextChanged="PasswordTextBoxVisible_TextChanged" x:Name="PasswordTextBoxVisible" HorizontalAlignment="Left" VerticalAlignment="Center" Width="160" FontFamily="Bahnschrift" FontSize="24" Visibility="Collapsed" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center" Margin="0, 12, 0, 0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Label HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Pokaż hasło" />
+                    <CheckBox x:Name="ShowPasswordCheckBox" HorizontalAlignment="Right" VerticalAlignment="Center" Checked="ShowPasswordCheckBox_Checked" Unchecked="ShowPasswordCheckBox_Unchecked" Margin="12, 0, 0, 0" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Margin="12, 0, 0, 0">
+                    <Label HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Pamiętaj moje dane" />
+                    <CheckBox x:Name="RememberMyDataCheckBox" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="12, 0, 0, 0" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Jesteś już zarejestrowany?" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Hyperlink NavigateUri="Login.xaml" Click="NavigateToLogin">
+                        <Run Text="Zaloguj się" />
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0, 24, 0, 0">
+                <Button x:Name="RegisterBtn" Content="Zarejestruj się" Background="LimeGreen" Padding="12" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Click="RegisterBtn_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

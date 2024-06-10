@@ -85,15 +85,11 @@ E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.Asse
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.CopyComplete
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.g.cs
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.baml
-E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.g.cs
-E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Home\Home.g.cs
 E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\TodoLista.dll.config
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Home\Home.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.g.cs
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.baml
-E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\RegistrationAndLogin\RegistrationAndLogin.g.cs
-E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\RegistrationAndLogin\RegistrationAndLogin.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.dll.config
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Home\Home.g.cs
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\RegistrationAndLogin\RegistrationAndLogin.g.cs
@@ -105,3 +101,11 @@ C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\T
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.g.cs
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Login\Login.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Login\Login.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Register\Register.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Register\Register.baml
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.g.cs
+E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.baml

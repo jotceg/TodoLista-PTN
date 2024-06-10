@@ -515,24 +515,19 @@ namespace TodoLista.Scripts
             return tasksLists;
         }
 
-        public static DataTable GetAllAvailableUsers()
+        public static DataTable GetAllRegisteredUsers()
         {
-            //Connection References
-            OleDbConnection conn;
-            OleDbCommand cmd;
-            OleDbDataAdapter adapter;
-            DataTable dt;
+            using (OleDbConnection conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            {
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Users", conn))
+                {
+                    DataTable dt = new DataTable();
+                    conn.Open();
+                    adapter.Fill(dt);
 
-            conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
-            dt = new DataTable();
-            adapter = new OleDbDataAdapter("SELECT * FROM Users", conn);
-
-            conn.Open();
-            adapter.Fill(dt);
-
-            conn.Close();
-
-            return dt;
+                    return dt;
+                }
+            }
         }
 
         public static void ClearData()

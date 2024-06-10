@@ -10,13 +10,16 @@
     <Compile Update="Pages\Home\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\RegistrationAndLogin\RegistrationAndLogin.xaml.cs">
+    <Compile Update="Pages\Login\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Register\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\EditTask\EditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml.cs">
+    <Compile Update="Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\UserImage\UserImageWindow.xaml.cs">
@@ -27,16 +30,19 @@
     <Page Update="Pages\Home\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\RegistrationAndLogin\RegistrationAndLogin.xaml">
+    <Page Update="Pages\Login\Login.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\Register\Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\EditTask\EditTaskWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Scripts\Tasks\MainMenuEditTaskWindow.xaml">
+    <Page Update="Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\UserImage\UserImageWindow.xaml">

@@ -18,6 +18,7 @@ using TodoLista.Scripts.Tasks;
 using TodoLista.Scripts;
 using TodoLista.Windows.EditTask;
 using TodoLista.Windows;
+using TodoLista.Windows.MainMenuEditTaskWindow;
 
 namespace TodoLista.Pages.Home
 {
@@ -65,7 +66,7 @@ namespace TodoLista.Pages.Home
                 if (tasksList.Id == State.SelectedTasksListId)
                 {
                     TasksDataGrid.ItemsSource = tasksList.Tasks;
-                    TopNameTextBox.Text = $"Wybrana lista zadań to: {selectedList.Name}";
+                    TopNameTextBox.Text = $"Wybrana lista zadań to: {selectedList?.Name}";
                     break;
                 }
             }
@@ -79,7 +80,7 @@ namespace TodoLista.Pages.Home
 
         private void SignOut(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)App.Current.MainWindow).NavigateTo(new RegistrationAndLogin.RegistrationAndLogin());
+            ((MainWindow)App.Current.MainWindow).NavigateTo(new Login.Login());
             State.SignOut();
         }
 
