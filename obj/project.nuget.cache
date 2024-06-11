@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "6qs+yaPV8qFWOGaaqVw0nYskP+8CdX0X8mySsTsBKEYALTca+GKJvngRVwVamwc16Ezanaj6PUSO9vJWp5/7kw==",
+  "dgSpecHash": "sfIL41d4fxQ=",
   "success": true,
-  "projectFilePath": "E:\\VisualStudioProjects\\TodoLista\\TodoLista.csproj",
+  "projectFilePath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\TodoLista.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jakub\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
-    "C:\\Users\\Jakub\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
-    "C:\\Users\\Jakub\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
-    "C:\\Users\\Jakub\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
-    "C:\\Users\\Jakub\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\kaniu\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

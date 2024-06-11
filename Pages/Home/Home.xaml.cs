@@ -319,6 +319,16 @@ namespace TodoLista.Pages.Home
                 LoadTasksForSelectedList(false);
             }
         }
+
+        private void AddButton_Enter(object sender, RoutedEventArgs e)
+        {
+            AddButtonBackground.ImageSource = (ImageSource)new ImageSourceConverter().ConvertFromString(Environment.CurrentDirectory + "/../../../Images/Core/PlusSignSelected.png");
+        }
+
+        private void AddButton_Leave(object sender, RoutedEventArgs e)
+        {
+            AddButtonBackground.ImageSource = (ImageSource)new ImageSourceConverter().ConvertFromString(Environment.CurrentDirectory + "/../../../Images/Core/PlusSign.png");
+        }
     }
 
 }

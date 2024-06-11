@@ -56,14 +56,14 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="10,0,10,20" Click="AddButton_Click">
+        <Button x:Name="AddButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="10,0,10,20" Click="AddButton_Click" MouseEnter="AddButton_Enter" MouseLeave="AddButton_Leave">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
                 </ControlTemplate>
             </Button.Template>
             <Button.Background>
-                <ImageBrush ImageSource="/Images/Core/PlusSign.png"/>
+                <ImageBrush x:Name="AddButtonBackground" ImageSource="/Images/Core/PlusSign.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="TopNameTextBox" Background="Transparent" BorderBrush="Transparent" FontFamily="Bahnschrift" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" Text="TopNameTEST" VerticalAlignment="Top" FontSize="25"/>
