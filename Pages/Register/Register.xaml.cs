@@ -31,6 +31,7 @@ namespace TodoLista.Pages.Register
             InitializeComponent();
         }
 
+        // Handling button to show or hide typed password
         private void ShowPasswordCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             PasswordTextBoxVisible.Text = PasswordTextBox.Password;
@@ -61,11 +62,15 @@ namespace TodoLista.Pages.Register
             }
         }
 
+        // Handling register button functionality
         private void RegisterBtn_Click(object sender, RoutedEventArgs e)
         {
-            string login = LoginTextBox.Text.Trim(); ; //Login Input
-            string password = PasswordTextBox.Password; // Password Input
+            // Preventing whitespaces
+            string login = LoginTextBox.Text.Trim();
 
+            string password = PasswordTextBox.Password;
+
+            // Inputs validations
             if (string.IsNullOrWhiteSpace(login) && string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Nie podano żadnego loginu ani hasła. Spróbuj ponownie", "Błąd");
@@ -96,6 +101,7 @@ namespace TodoLista.Pages.Register
                 return;
             }
 
+            // Database content validation
             if (DatabaseManager.DoesUserExist(login))
             {
                 MessageBox.Show("Użytkownik o podanym loginie już istnieje, zaloguj się i spróbuj ponownie.", "Błąd");
@@ -106,12 +112,15 @@ namespace TodoLista.Pages.Register
 
             if (RememberMyDataCheckBox.IsChecked == true)
             {
+                // Save login state to Login.txt for auto sign-in functionality
                 LoginState.SaveLoginData(login, password);
             };
 
+            // Navigating to home page
             ((MainWindow)App.Current.MainWindow).NavigateTo(new Home.Home());
         }
 
+        // Handling navigation to login page if the user already has an account
         private void NavigateToLogin(object sender, RoutedEventArgs e)
         {
             ((MainWindow)App.Current.MainWindow).NavigateTo(new Login.Login());

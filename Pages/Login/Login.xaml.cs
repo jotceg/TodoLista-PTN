@@ -31,12 +31,15 @@ namespace TodoLista.Pages.Login
             InitializeComponent();
         }
 
-        //Button Logic
+        // Handling login button functionality
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
+            // Preventing whitespaces
             string login = LoginTextBox.Text.Trim();
+            
             string password = PasswordTextBox.Password;
 
+            // Inputs validations
             if (string.IsNullOrWhiteSpace(login) && string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Nie podano żadnego loginu ani hasła. Spróbuj ponownie", "Błąd");
@@ -55,6 +58,8 @@ namespace TodoLista.Pages.Login
                 return;
             };
 
+
+            // Database content validation
             if (!DatabaseManager.DoesUserExist(login))
             {
                 MessageBox.Show("Użytkownik o podanym loginie nie istnieje, załóż nowe konto i spróbuj ponownie.", "Błąd");
@@ -71,12 +76,15 @@ namespace TodoLista.Pages.Login
 
             if (RememberMyDataCheckBox.IsChecked == true)
             {
-                LoginState.SaveLoginData(login, password); // Save login state to Login.txt
+                // Save login state to Login.txt for auto sign-in functionality
+                LoginState.SaveLoginData(login, password);
             }
 
+            // Navigating to home page
             ((MainWindow)App.Current.MainWindow).NavigateTo(new Home.Home());
         }
 
+        // Handling button to show or hide typed password
         private void ShowPasswordCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             PasswordTextBoxVisible.Text = PasswordTextBox.Password;
@@ -107,6 +115,7 @@ namespace TodoLista.Pages.Login
             }
         }
 
+        // Handling navigation to register page if the user doesn't have an account yet
         private void NavigateToRegister(object sender, RoutedEventArgs e)
         {
             ((MainWindow)App.Current.MainWindow).NavigateTo(new Register.Register());

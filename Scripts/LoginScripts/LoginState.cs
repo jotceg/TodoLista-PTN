@@ -11,6 +11,7 @@ namespace TodoLista.Scripts.LoginScripts
     {
         private static readonly string FilePath = "LoginState.txt";
 
+        // Saving login data into text file
         public static void SaveLoginData(string login, string password)
         {
             using (StreamWriter writer = new StreamWriter(FilePath))
@@ -20,6 +21,7 @@ namespace TodoLista.Scripts.LoginScripts
             }
         }
 
+        // Retrieving login data from file (if it exists)
         public static (string login, string password) GetSavedLoginData()
         {
             if (!File.Exists(FilePath))
@@ -36,6 +38,7 @@ namespace TodoLista.Scripts.LoginScripts
             return (null, null);
         }
 
+        // For sign-out purposes
         public static void ClearLoginDataState()
         {
             if (File.Exists(FilePath))

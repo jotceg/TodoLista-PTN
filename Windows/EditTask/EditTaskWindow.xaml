@@ -32,7 +32,7 @@
         </StackPanel>
         <StackPanel Margin="10,140,10,10" Grid.Column="0">
             <Label Content="Data realizacji*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
-            <DatePicker x:Name="DatePickerBtn" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <DatePicker x:Name="DatePickerBtn" HorizontalAlignment="Stretch" VerticalAlignment="Top" BorderBrush="Transparent"/>
             <Label Content="Godzina*:" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             <ComboBox x:Name="TimeHourComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Top">
                 <ComboBoxItem>00</ComboBoxItem>

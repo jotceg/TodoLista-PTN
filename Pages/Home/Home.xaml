@@ -27,7 +27,7 @@
         <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0"/>
         <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
         <DataGrid x:Name="TasksDataGrid" AutoGenerateColumns="False" IsReadOnly="True"
-          HeadersVisibility="None" Background="Transparent" BorderBrush="Transparent" Grid.Column="1" Margin="10,50,10,10" FontSize="20"
+          HeadersVisibility="None" Background="Transparent" BorderBrush="Transparent" Grid.Column="1" Margin="10,70,10,10" FontSize="20"
             MouseDoubleClick="TasksDataGrid_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Width="*">
@@ -56,14 +56,14 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="10,0,10,20" Click="AddButton_Click">
+        <Button x:Name="AddButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="10,0,10,20" Click="AddButton_Click" MouseEnter="AddButton_Enter" MouseLeave="AddButton_Leave">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
                 </ControlTemplate>
             </Button.Template>
             <Button.Background>
-                <ImageBrush ImageSource="/Images/Core/PlusSign.png"/>
+                <ImageBrush x:Name="AddButtonBackground" ImageSource="/Images/Core/PlusSign.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="TopNameTextBox" Background="Transparent" BorderBrush="Transparent" FontFamily="Bahnschrift" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" Text="TopNameTEST" VerticalAlignment="Top" FontSize="25"/>
@@ -74,7 +74,7 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="UserNameTextBox" Background="Transparent" BorderBrush="Transparent" FontFamily="Bahnschrift" Text="Witaj, " IsReadOnly="True" HorizontalAlignment="Stretch" Margin="80,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="17" MaxHeight="60" Grid.Column="0" TextAlignment="Center"/>
-        <ItemsControl x:Name="TasksListsItemsControl" Margin="10,100,10,35" FontSize="15" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" ItemsSource="{Binding tasksLists}" Grid.RowSpan="2">
+        <ItemsControl x:Name="TasksListsItemsControl" Margin="10,100,10,100" FontSize="15" Background="Transparent" BorderBrush="Transparent" Grid.Column="0" ItemsSource="{Binding tasksLists}" Grid.RowSpan="2">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Button Uid="{Binding Id}" Click="OpenTasksList" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Content="{Binding Name}">
@@ -88,11 +88,14 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <Button x:Name="AddTasksListButton" FontFamily="Bahnschrift" FontSize="20" Height="25" Content="Dodaj listę" Background="LightGreen" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10, 0, 10, 10" Click="AddTasksListButton_Click"/>
+        <Button x:Name="AddTasksListButton" FontFamily="Bahnschrift" FontSize="20" Height="25" Content="Dodaj listę" Background="LightGreen" BorderBrush="Transparent" BorderThickness="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10,0,10,75" Click="AddTasksListButton_Click"/>
+        <Button x:Name="ImportDataBtn" FontFamily="Bahnschrift" FontSize="20" Grid.Column="0" Content="Importuj listę" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="25" Click="ImportDataBtn_Click" Background="White" Margin="10,10,10,35"/>
+        <Button Grid.Column="0" Content="Eksportuj listę" FontFamily="Bahnschrift" FontSize="20" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="10,10,10,10" Click="ExportDatabaseButton_Click" Background="White" Height="25"/>
         <Button x:Name="OpenLoginWindowBtn" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="White" Margin="10,10,10,0" Height="20" Click="SignOut">
             <TextBlock x:Name="OpenLoginWindowBtnTextBox" Text="Wyloguj się" HorizontalAlignment="Center" FontSize="14" Background="Transparent" FontFamily="Bahnschrift" VerticalAlignment="Top" TextAlignment="Center" TextWrapping="Wrap" Height="24" IsEnabled="False" />
         </Button>
         <TextBox x:Name="SideTitleTextBox" Background="Transparent" BorderBrush="Transparent" Text="Twoje listy zadań" IsReadOnly="True" HorizontalAlignment="Stretch" Margin="10,71,10,0" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" Grid.Column="0" FontFamily="Bahnschrift"/>
         <Button x:Name="SidePanelButton" Grid.Column="1" Height="20" Width="15" VerticalContentAlignment="Top" Content="&lt;" FontSize="15" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" Click="SidePanelButton_Click"/>
+        <TextBlock x:Name="TasksCountTextBlock" Grid.Column="1" Margin="10,40,10,10" FontFamily="Bahnschrift" FontSize="20" HorizontalAlignment="Right" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 </Page>

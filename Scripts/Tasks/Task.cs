@@ -39,7 +39,5 @@ namespace TodoLista.Scripts.Tasks
             this.Date = Date;
             this.isCompleted = isCompleted;
         }
-
-        // title, priority (low, medium, high), description, date, etc
     }
 }

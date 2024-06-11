@@ -1,2 +1,2 @@
-User: Test
-UserPassword: Testowehaslo
+User: kuba
+UserPassword: KubaKuba

@@ -123,7 +123,7 @@ namespace TodoLista.Windows.MainMenuEditTaskWindow
 
                 //MainWindow.Instance.LoadTasksForSelectedList();
 
-                this.Close();
+                Close();
             }
         }
     }

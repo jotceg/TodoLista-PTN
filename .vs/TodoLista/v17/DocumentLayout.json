@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\userimage\\userimagewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:windows\\userimage\\userimagewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\mainmenuedittaskwindow\\mainmenuedittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:windows\\mainmenuedittaskwindow\\mainmenuedittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\edittask\\edittaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:windows\\edittask\\edittaskwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\home\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\userimage\\userimagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:windows\\userimage\\userimagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\windows\\edittask\\edittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:windows\\edittask\\edittaskwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,60 +32,32 @@
               "RelativeDocumentMoniker": "Windows\\EditTask\\EditTaskWindow.xaml.cs",
               "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\EditTask\\EditTaskWindow.xaml.cs",
               "RelativeToolTip": "Windows\\EditTask\\EditTaskWindow.xaml.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAgwBMAAAALAAAA",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T10:25:39.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:37:51.492Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserImageWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\UserImage\\UserImageWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Windows\\UserImage\\UserImageWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\UserImage\\UserImageWindow.xaml.cs",
-              "RelativeToolTip": "Windows\\UserImage\\UserImageWindow.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAA/wD4AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T10:01:50.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserImageWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\UserImage\\UserImageWindow.xaml",
-              "RelativeDocumentMoniker": "Windows\\UserImage\\UserImageWindow.xaml",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\UserImage\\UserImageWindow.xaml",
-              "RelativeToolTip": "Windows\\UserImage\\UserImageWindow.xaml",
+              "Title": "MainMenuEditTaskWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\MainMenuEditTaskWindow\\MainMenuEditTaskWindow.xaml",
+              "RelativeDocumentMoniker": "Windows\\MainMenuEditTaskWindow\\MainMenuEditTaskWindow.xaml",
+              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\MainMenuEditTaskWindow\\MainMenuEditTaskWindow.xaml",
+              "RelativeToolTip": "Windows\\MainMenuEditTaskWindow\\MainMenuEditTaskWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-11T09:07:24.491Z",
+              "WhenOpened": "2024-06-11T16:31:03.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Home.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml.cs",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
-              "RelativeToolTip": "Pages\\Home\\Home.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAawCsAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:18:30.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
-              "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
-              "RelativeToolTip": "Pages\\Home\\Home.xaml",
+              "Title": "EditTaskWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\EditTask\\EditTaskWindow.xaml",
+              "RelativeDocumentMoniker": "Windows\\EditTask\\EditTaskWindow.xaml",
+              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Windows\\EditTask\\EditTaskWindow.xaml",
+              "RelativeToolTip": "Windows\\EditTask\\EditTaskWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-09T11:20:06.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T16:30:57.384Z"
             }
           ]
         }

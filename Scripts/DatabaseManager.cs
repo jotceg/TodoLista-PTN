@@ -10,17 +10,12 @@ using TodoLista.Scripts.Tasks;
 using System.Windows.Documents;
 using System.Collections;
 using System.Windows;
+using System.IO;
 
 namespace TodoLista.Scripts
 {
     public static class DatabaseManager
     {
-        /* private const string userDataBase = "UserDataBase.accdb";
-        private const string tasksListsDataBase = "TasksListsDataBase.accdb";
-        private const string tasksDataBase = "TasksDataBase.accdb";
-        private const string userDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + userDataBase;
-        private const string tasksListDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksListsDataBase;
-        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase; */
         private const string connectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=DataBase.accdb";
 
         public static bool DoesUserExist(string name)
@@ -43,6 +38,45 @@ namespace TodoLista.Scripts
             conn.Close();
 
             return userCount > 0;
+        }
+        public static void ImportDatabase(string filePath)
+        {
+            try
+            {
+                string destinationPath = Path.Combine(Environment.CurrentDirectory, "Database.accdb");
+
+                ClearAllData();
+                File.Copy(filePath, destinationPath, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas importu: {ex.Message}");
+            }
+        }
+
+        private static void ClearAllData()
+        {
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
+            {
+                conn.Open();
+                using (OleDbCommand cmd = new OleDbCommand())
+                {
+                    cmd.Connection = conn;
+                    List<string> tables = new List<string> { "Users", "Lists", "Tasks" };
+
+                    foreach (var table in tables)
+                    {
+                        cmd.CommandText = $"DELETE FROM {table}";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        public static void ExportDatabase(string filePath)
+        {
+            string sourcePath = Path.Combine(Environment.CurrentDirectory, "Database.accdb");
+            File.Copy(sourcePath, filePath, true);
         }
 
         public static void AddTasksList(int UserId, string ListName)
@@ -69,6 +103,7 @@ namespace TodoLista.Scripts
 
             RetrieveUserData();
         }
+
 
         public static bool DoesTaskNameAlreadyExist(int listId, string taskName)
         {
@@ -742,5 +777,7 @@ namespace TodoLista.Scripts
 
             LoginUser(name, password);
         }
+
+        
     }
 }

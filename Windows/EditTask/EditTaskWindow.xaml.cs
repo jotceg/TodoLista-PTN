@@ -31,16 +31,6 @@ namespace TodoLista.Windows.EditTask
         private OleDbDataAdapter adapter;
         private DataTable dt;
 
-        //DataBase NAme and Connection Location Information  
-        /* private const string DataBaseName = "TasksDataBase.accdb";
-        private const string connectionAndDataString = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + DataBaseName;
-
-        private const string userDataBase = "UserDataBase.accdb";
-        private const string tasksListsDataBase = "TasksListsDataBase.accdb";
-        private const string tasksDataBase = "TasksDataBase.accdb";
-        private const string userDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + userDataBase;
-        private const string tasksListDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksListsDataBase;
-        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase; */
         private const string connectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=DataBase.accdb";
 
         public EditTaskWindow()
