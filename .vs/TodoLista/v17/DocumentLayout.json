@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\",
+  "WorkspaceRootPath": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\rusin\\onedrive\\dokumenty\\github\\todolista-ptn\\scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:scripts\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\kaniu\\documents\\github\\todolista-ptn\\pages\\home\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\rusin\\onedrive\\dokumenty\\github\\todolista-ptn\\pages\\home\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|c:\\users\\rusin\\onedrive\\dokumenty\\github\\todolista-ptn\\pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FEF8924-25F9-436A-BDD9-38F311685FA5}|TodoLista.csproj|solutionrelative:pages\\home\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 168,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Home.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
-              "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml.cs",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
-              "RelativeToolTip": "Pages\\Home\\Home.xaml.cs",
-              "ViewState": "AQIAADoBAAAAAAAAAAAqwEcBAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:18:30.173Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
+              "DocumentMoniker": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
               "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml",
-              "ToolTip": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
+              "ToolTip": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml",
               "RelativeToolTip": "Pages\\Home\\Home.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-06-09T11:20:06.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Scripts\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Scripts\\DatabaseManager.cs",
+              "RelativeToolTip": "Scripts\\DatabaseManager.cs",
+              "ViewState": "AQIAAC0BAAAAAAAAAAAMwEwBAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T15:00:44.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\Home\\Home.xaml.cs",
+              "ToolTip": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\Pages\\Home\\Home.xaml.cs",
+              "RelativeToolTip": "Pages\\Home\\Home.xaml.cs",
+              "ViewState": "AQIAAHMBAAAAAAAAAAAAAH8BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T11:18:30.173Z",
               "EditorCaption": ""
             }
           ]

@@ -20,6 +20,7 @@ using TodoLista.Windows.EditTask;
 using TodoLista.Windows;
 using TodoLista.Windows.MainMenuEditTaskWindow;
 using System.IO;
+using Microsoft.Win32;
 
 namespace TodoLista.Pages.Home
 {
@@ -51,6 +52,8 @@ namespace TodoLista.Pages.Home
                     State.SelectedTasksListId = tasksLists.First().Id;
                     LoadTasksForSelectedList();
                 }
+
+                TaskCount();
             }
             else
             {
@@ -328,6 +331,54 @@ namespace TodoLista.Pages.Home
         private void AddButton_Leave(object sender, RoutedEventArgs e)
         {
             AddButtonBackground.ImageSource = (ImageSource)new ImageSourceConverter().ConvertFromString(Environment.CurrentDirectory + "/../../../Images/Core/PlusSign.png");
+        }
+
+        private void ImportDataBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog
+            {
+                DefaultExt = ".accdb",
+                Filter = "Access Database files (.accdb)|*.accdb"
+            };
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                DatabaseManager.ImportDatabase(filename);
+                InitializeUserData();
+                TasksListsItemsControl.Items.Refresh();
+                TasksDataGrid.Items.Refresh();
+                MessageBox.Show("Lista została zaimportowana poprawnie!", "Udało się", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void ExportDatabaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog
+            {
+                FileName = "TodoListDataBase",
+                DefaultExt = ".accdb",
+                Filter = "Access Database files (.accdb)|*.accdb"
+            };
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                string filename = dlg.FileName;
+                DatabaseManager.ExportDatabase(filename);
+                MessageBox.Show("Lista została wyeksportowana poprawnie!", "Udało się", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        public void TaskCount()
+        {
+            int totalTasks = tasksLists.Sum(list => list.Tasks.Count);
+            int completedTasks = tasksLists.Sum(list => list.Tasks.Count(task => task.isCompleted));
+
+            TasksCountTextBlock.Text = $"Łączna liczba zadań to: {totalTasks},Zrealizowanych: {completedTasks}";
         }
     }
 

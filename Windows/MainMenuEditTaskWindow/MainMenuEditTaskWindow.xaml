@@ -31,9 +31,9 @@
             <TextBox x:Name="DescriptionTextBox" VerticalAlignment="Stretch" Height="100" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" FontFamily="Bahnschrift"/>
             <TextBlock Text="Priorytet*:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
             <ComboBox x:Name="PriorityComboBox" VerticalAlignment="Stretch" SelectedIndex="0"  FontSize="20" FontFamily="Bahnschrift">
-                <ComboBoxItem Content="Low"/>
-                <ComboBoxItem Content="Medium"/>
-                <ComboBoxItem Content="High"/>
+                <ComboBoxItem Content="Niski"/>
+                <ComboBoxItem Content="Średni"/>
+                <ComboBoxItem Content="Wysoki"/>
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="2" Margin="10,10,10,10">

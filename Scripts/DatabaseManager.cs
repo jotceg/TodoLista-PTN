@@ -10,6 +10,7 @@ using TodoLista.Scripts.Tasks;
 using System.Windows.Documents;
 using System.Collections;
 using System.Windows;
+using System.IO;
 
 namespace TodoLista.Scripts
 {
@@ -44,6 +45,45 @@ namespace TodoLista.Scripts
 
             return userCount > 0;
         }
+        public static void ImportDatabase(string filePath)
+        {
+            try
+            {
+                string destinationPath = Path.Combine(Environment.CurrentDirectory, "Database.accdb");
+
+                ClearAllData();
+                File.Copy(filePath, destinationPath, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Wystąpił błąd podczas importu: {ex.Message}");
+            }
+        }
+
+        private static void ClearAllData()
+        {
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
+            {
+                conn.Open();
+                using (OleDbCommand cmd = new OleDbCommand())
+                {
+                    cmd.Connection = conn;
+                    List<string> tables = new List<string> { "Users", "Lists", "Tasks" };
+
+                    foreach (var table in tables)
+                    {
+                        cmd.CommandText = $"DELETE FROM {table}";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        public static void ExportDatabase(string filePath)
+        {
+            string sourcePath = Path.Combine(Environment.CurrentDirectory, "Database.accdb");
+            File.Copy(sourcePath, filePath, true);
+        }
 
         public static void AddTasksList(int UserId, string ListName)
         {
@@ -69,6 +109,7 @@ namespace TodoLista.Scripts
 
             RetrieveUserData();
         }
+
 
         public static bool DoesTaskNameAlreadyExist(int listId, string taskName)
         {
@@ -742,5 +783,7 @@ namespace TodoLista.Scripts
 
             LoginUser(name, password);
         }
+
+        
     }
 }

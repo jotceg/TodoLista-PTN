@@ -94,5 +94,8 @@
         </Button>
         <TextBox x:Name="SideTitleTextBox" Background="Transparent" BorderBrush="Transparent" Text="Twoje listy zadań" IsReadOnly="True" HorizontalAlignment="Stretch" Margin="10,71,10,0" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" Grid.Column="0" FontFamily="Bahnschrift"/>
         <Button x:Name="SidePanelButton" Grid.Column="1" Height="20" Width="15" VerticalContentAlignment="Top" Content="&lt;" FontSize="15" Background="Transparent" BorderBrush="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0" Click="SidePanelButton_Click"/>
+        <Button x:Name="ImportDataBtn" Grid.Column="1" Content="Importuj listę" HorizontalAlignment="Left" Margin="45,370,0,0" VerticalAlignment="Top" Height="46" Width="164" Click="ImportDataBtn_Click"/>
+        <Button Grid.Column="1" Content="Eksportuj listę" HorizontalAlignment="Left" Margin="320,371,0,0" VerticalAlignment="Top" Click="ExportDatabaseButton_Click" Height="45" Width="142"/>
+        <TextBlock x:Name="TasksCountTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="320,276,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="60" Width="190"/>
     </Grid>
 </Page>
