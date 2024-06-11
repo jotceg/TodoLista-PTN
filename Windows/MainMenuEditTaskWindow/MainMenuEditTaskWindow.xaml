@@ -37,10 +37,10 @@
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Column="2" Margin="10,10,10,10">
-            <TextBlock Text="Data:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
-            <DatePicker x:Name="DatePickerBtn" VerticalAlignment="Stretch" FontSize="20" FontFamily="Bahnschrift"/>
+            <TextBlock Text="Data*:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
+            <DatePicker x:Name="DatePickerBtn" VerticalAlignment="Stretch" FontSize="20" FontFamily="Bahnschrift" BorderBrush="Transparent"/>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Time:" VerticalAlignment="Center" Width="80" FontSize="25" FontFamily="Bahnschrift"/>
+                <TextBlock Text="Godzina*:" VerticalAlignment="Center" Width="110" FontSize="25" FontFamily="Bahnschrift"/>
                 <ComboBox x:Name="TimeHourComboBox" Width="60" FontSize="20" FontFamily="Bahnschrift">
                     <!-- Add hours here -->
                     <ComboBoxItem Content="00"/>
@@ -70,7 +70,7 @@
 
                     <!-- Add more hours as needed -->
                 </ComboBox>
-                <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0"/>
+                <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0" FontFamily="Bahnschrift" FontSize="25"/>
                 <ComboBox x:Name="TimeMinutesComboBox" Width="60" FontSize="20" FontFamily="Bahnschrift">
                     <!-- Add minutes here -->
                     <ComboBoxItem>00</ComboBoxItem>

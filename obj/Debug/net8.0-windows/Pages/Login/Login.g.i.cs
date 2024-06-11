@@ -100,7 +100,7 @@ namespace TodoLista.Pages.Login {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TodoLista;V1.0.0.0;component/pages/login/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TodoLista;component/pages/login/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\Login\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

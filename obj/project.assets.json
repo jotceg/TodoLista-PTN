@@ -302,23 +302,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rusin\\.nuget\\packages\\": {},
+    "C:\\Users\\kaniu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\TodoLista.csproj",
+      "projectUniqueName": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\TodoLista.csproj",
       "projectName": "TodoLista",
-      "projectPath": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\TodoLista.csproj",
-      "packagesPath": "C:\\Users\\rusin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusin\\OneDrive\\Dokumenty\\GitHub\\TodoLista-PTN\\obj\\",
+      "projectPath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\TodoLista.csproj",
+      "packagesPath": "C:\\Users\\kaniu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaniu\\Documents\\GitHub\\TodoLista-PTN\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rusin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kaniu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -46,7 +46,6 @@ namespace TodoLista.Windows
             {
                 Image image = UserImageList.SelectedItem as Image;
                 string fileName = System.IO.Path.GetFileName(image.Source.ToString());
-                // Tu potrzeba jeszcze dodać: zmianę wartości kolumny UserImage w tabeli Users dla zalogowanego użytkownika na wartość zmiennej file
                 DatabaseManager.SetUserImage(fileName);
                 Close();
 
