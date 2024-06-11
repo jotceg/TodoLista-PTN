@@ -262,6 +262,13 @@ namespace TodoLista.Windows.EditTask
             int minute = int.Parse((TimeMinutesComboBox.SelectedItem as ComboBoxItem).Content.ToString());
 
 
+
+            if (date == null)
+            {
+                MessageBox.Show("Wybierz Datę realizacji zadania!.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             DateTime dateAndTime = date.Value.AddHours(hour).AddMinutes(minute);
 
             if (dateAndTime <= DateTime.Now)

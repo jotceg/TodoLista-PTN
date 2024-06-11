@@ -65,10 +65,6 @@ E:\TodoLista-PTN\obj\Debug\net8.0-windows\refint\TodoLista.dll
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.pdb
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.genruntimeconfig.cache
 E:\TodoLista-PTN\obj\Debug\net8.0-windows\ref\TodoLista.dll
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.g.cs
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.g.cs
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\LoginScripts\LoginAndRegistrationWindow.baml
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\EditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\System.Data.OleDb.dll
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.csproj.AssemblyReference.cache
@@ -83,8 +79,6 @@ E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\runtimes\win\lib\net8
 E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.AssemblyReference.cache
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\TodoLista.csproj.CopyComplete
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.g.cs
-E:\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Home\Home.g.cs
 E:\VisualStudioProjects\TodoLista\bin\Debug\net8.0-windows\TodoLista.dll.config
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Home\Home.baml
@@ -149,3 +143,16 @@ C:\Users\rusin\OneDrive\Dokumenty\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\
 C:\Users\rusin\OneDrive\Dokumenty\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.pdb
 C:\Users\rusin\OneDrive\Dokumenty\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\TodoLista.genruntimeconfig.cache
 C:\Users\rusin\OneDrive\Dokumenty\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\ref\TodoLista.dll
+E:\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.dll.config
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Login\Login.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Home\Home.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Login\Login.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Register\Register.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.g.cs
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Home\Home.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Register\Register.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.baml
+E:\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.baml
