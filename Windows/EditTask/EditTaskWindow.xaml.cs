@@ -79,11 +79,11 @@ namespace TodoLista.Windows.EditTask
         public void RetrieveUserData()
         {
             int userId = 0;
-            string userLogin = "", userPassword = "";
+            string userLogin = "", userPassword = "", image = "";
 
             using (conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                string query = "SELECT Id, Name, UserPassword, UserImage FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", State.User.Login);
@@ -98,6 +98,7 @@ namespace TodoLista.Windows.EditTask
                             userId = reader.GetInt32(reader.GetOrdinal("Id"));
                             userLogin = reader.GetString(reader.GetOrdinal("Name"));
                             userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                            image = (string)reader["UserImage"];
                         }
                     }
                 }
@@ -161,7 +162,7 @@ namespace TodoLista.Windows.EditTask
                 }
             }
 
-            State.User = new User(userId, userLogin, userPassword, tasksLists);
+            State.User = new User(userId, userLogin, userPassword, tasksLists, image);
             //MainWindow.Instance.LoadTasksForSelectedList();
         }
 

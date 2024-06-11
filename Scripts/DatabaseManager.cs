@@ -227,13 +227,13 @@ namespace TodoLista.Scripts
         public static void RetrieveUserData()
         {
             int userId = 0;
-            string userLogin = "", userPassword = "";
+            string userLogin = "", userPassword = "", image = "";
 
             OleDbConnection conn;
           
             using (conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                string query = "SELECT Id, Name, UserPassword, UserImage FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", State.User.Login);
@@ -248,6 +248,7 @@ namespace TodoLista.Scripts
                             userId = reader.GetInt32(reader.GetOrdinal("Id"));
                             userLogin = reader.GetString(reader.GetOrdinal("Name"));
                             userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                            image = (string)reader["UserImage"];
                         }
                     }
                 }
@@ -311,7 +312,7 @@ namespace TodoLista.Scripts
                 }
             }
 
-            State.User = new User(userId, userLogin, userPassword, tasksLists);
+            State.User = new User(userId, userLogin, userPassword, tasksLists, image);
         }
 
         public static void UpdateTask(Scripts.Tasks.Task task)
@@ -394,7 +395,7 @@ namespace TodoLista.Scripts
         {
             using (var conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                string query = "SELECT Id, Name, UserPassword, UserImage FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (var cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", login);
@@ -409,10 +410,11 @@ namespace TodoLista.Scripts
                             int userId = reader.GetInt32(reader.GetOrdinal("Id"));
                             string userLogin = reader.GetString(reader.GetOrdinal("Name"));
                             string userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                            string image = reader.GetString(reader.GetOrdinal("UserImage"));
 
                             List<TasksList> tasksLists = GetUserTasksLists(userId);
 
-                            State.User = new User(userId, userLogin, userPassword, tasksLists);
+                            State.User = new User(userId, userLogin, userPassword, tasksLists, image);
                             return true;
                         }
                     }
@@ -425,11 +427,11 @@ namespace TodoLista.Scripts
         public static User GetUserData(string login, string password)
         {
             int userId = 0;
-            string userLogin = "", userPassword = "";
+            string userLogin = "", userPassword = "", image = "";
 
             using (var conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                string query = "SELECT Id, Name, UserPassword, UserImage FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (var cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", login);
@@ -444,6 +446,7 @@ namespace TodoLista.Scripts
                             userId = reader.GetInt32(reader.GetOrdinal("Id"));
                             userLogin = reader.GetString(reader.GetOrdinal("Name"));
                             userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                            image = (string)reader["UserImage"];
                         }
                     }
                 }
@@ -452,7 +455,7 @@ namespace TodoLista.Scripts
             if (userId > 0)
             {
                 var tasksLists = GetUserTasksLists(userId);
-                return new User(userId, userLogin, userPassword, tasksLists);
+                return new User(userId, userLogin, userPassword, tasksLists, image);
             }
 
             return null;
@@ -552,7 +555,7 @@ namespace TodoLista.Scripts
             conn.Close();
         }
 
-        public static void ImplementUserData(int userId, string userLogin, string userPassword)
+        public static void ImplementUserData(int userId, string userLogin, string userPassword, string userImage)
         {
             //Connection References
             OleDbConnection conn;
@@ -618,7 +621,7 @@ namespace TodoLista.Scripts
                 }
             }
 
-            State.User = new User(userId, userLogin, userPassword, tasksLists);
+            State.User = new User(userId, userLogin, userPassword, tasksLists, userImage);
         }
 
         public static void LoginUser(string name, string password)
@@ -630,11 +633,11 @@ namespace TodoLista.Scripts
             DataTable dt;
 
             int userId = 0;
-            string userLogin = "", userPassword = "";
+            string userLogin = "", userPassword = "", image = "";
 
             using (conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
+                string query = "SELECT Id, Name, UserPassword, UserImage FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", name);
@@ -649,12 +652,13 @@ namespace TodoLista.Scripts
                             userId = reader.GetInt32(reader.GetOrdinal("Id"));
                             userLogin = reader.GetString(reader.GetOrdinal("Name"));
                             userPassword = reader.GetString(reader.GetOrdinal("UserPassword"));
+                            image = (string)reader["UserImage"];
                         }
                     }
                 }
             }
 
-            ImplementUserData(userId, userLogin, userPassword);
+            ImplementUserData(userId, userLogin, userPassword, image);
         }
 
         public static void MarkTaskAsCompleted(int id, bool isCompleted)
@@ -676,6 +680,24 @@ namespace TodoLista.Scripts
 
         }
 
+        public static void SetUserImage(string fileName)
+        {
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
+            {
+                //string query = "UPDATE Tasks SET Title = @Title, Description = @Description, Priority = @Priority, RealizationDate = @RealizationDate WHERE TaskId = @TaskId";
+                string query = "UPDATE Users SET UserImage = @UserImage WHERE Id = @Id";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserImage", fileName);
+                    cmd.Parameters.AddWithValue("@Id", State.User.Id);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            RetrieveUserData();
+        }
+
         public static void RegisterUser(string name, string password)
         {
             string userId;
@@ -688,12 +710,13 @@ namespace TodoLista.Scripts
 
             using (conn = new OleDbConnection(connectionAndDataSetting))
             {
-                string query = "INSERT INTO Users (Name, UserPassword) VALUES (@Name, @UserPassword)";
+                string query = "INSERT INTO Users (Name, UserPassword, UserImage) VALUES (@Name, @UserPassword, @UserImage)";
 
                 using (cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Name", name); // Add Parameters name to DataBase
                     cmd.Parameters.AddWithValue("@UserPassword", password);
+                    cmd.Parameters.AddWithValue("@UserImage", "c1.png");
 
                     conn.Open(); // Open Connetction With DataBase
                     cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase

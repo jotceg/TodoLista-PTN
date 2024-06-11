@@ -41,8 +41,8 @@
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Uid="{Binding Id}" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="Transparent">
                                     <TextBlock TextAlignment="Left" Width="300" Text="{Binding Title}" VerticalAlignment="Center"/>
-                                    <Button Click="DeleteTaskBtn_Click" Background="Red" Content="Usuń" Margin="25,0,25,0"/>
                                     <CheckBox x:Name="TaskDoneCheckBox" FontSize="24" VerticalAlignment="Center" IsChecked="{Binding isCompleted}" Click="TaskDoneCheckBox_Checked"/>
+                                    <TextBlock TextAlignment="Left" VerticalAlignment="Stretch" Text="{Binding Description}" Margin="10,0,0,0"/>
                                     <StackPanel.ContextMenu>
                                         <ContextMenu Uid="{Binding Id}">
                                             <MenuItem Header="Zmień nazwę zadania" Click="RenameTaskMenuItem_Click" />
@@ -56,7 +56,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddButton" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="75" Width="75" Margin="0,0,20,20" Click="AddButton_Click">
+        <Button x:Name="AddButton" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="75" Width="75" Margin="10,0,10,20" Click="AddButton_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Ellipse Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"/>
@@ -67,7 +67,7 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="TopNameTextBox" Background="Transparent" BorderBrush="Transparent" FontFamily="Bahnschrift" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Margin="30,10,0,0" TextWrapping="Wrap" Text="TopNameTEST" VerticalAlignment="Top" FontSize="25"/>
-        <CheckBox Click="ShowOnlyUnfinishedTasksCheckBox_Click"  x:Name="ShowOnlyUnfinishedTasksCheckBox" Content="Pokaż tylko nieukończone zadania" Grid.Column="1" FontFamily="Bahnschrift" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="400,18,0,0" />
+        <CheckBox Click="ShowOnlyUnfinishedTasksCheckBox_Click"  x:Name="ShowOnlyUnfinishedTasksCheckBox" Content="Pokaż tylko nieukończone zadania" Grid.Column="1" FontFamily="Bahnschrift" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,20,10,0" />
         <Button x:Name="UserImageButton" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Height="60" Click="UserImageButton_Click">
             <Button.Background>
                 <ImageBrush x:Name="UserImage"/>

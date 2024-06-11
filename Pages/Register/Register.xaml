@@ -9,6 +9,7 @@
       Title="Register"
       >
     <Grid Background="White">
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
             <Label Content="TodoLista" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Bahnschrift" />
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0, 24, 0, 0">

@@ -19,6 +19,7 @@ using TodoLista.Scripts;
 using TodoLista.Windows.EditTask;
 using TodoLista.Windows;
 using TodoLista.Windows.MainMenuEditTaskWindow;
+using System.IO;
 
 namespace TodoLista.Pages.Home
 {
@@ -42,6 +43,8 @@ namespace TodoLista.Pages.Home
                 tasksLists = State.User.TasksLists;
                 TasksListsItemsControl.ItemsSource = tasksLists;
                 UserNameTextBox.Text = $"Witaj, {State.User.Login}";
+                ImageSource imageSource;
+                UserImage.ImageSource = (ImageSource)new ImageSourceConverter().ConvertFromString(Environment.CurrentDirectory + "/../../../Images/User/" + State.User.Image);
 
                 if (tasksLists.Any())
                 {
@@ -287,31 +290,6 @@ namespace TodoLista.Pages.Home
             }
         }
 
-        private void DeleteTaskBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = sender as Button;
-            if (button != null)
-            {
-                StackPanel stackPanel = button.Parent as StackPanel;
-                if (stackPanel != null)
-                {
-                    int taskId = int.Parse(stackPanel.Uid);
-
-                    if (taskId != null)
-                    {
-                        MessageBoxResult result = MessageBox.Show($"Czy na pewno chcesz usunąć to zadanie?", "Potwierdzenie usunięcia", MessageBoxButton.YesNo);
-                        if (result == MessageBoxResult.Yes)
-                        {
-                            DatabaseManager.DeleteSingleTask(taskId);
-                            InitializeUserData();
-                            TasksListsItemsControl.Items.Refresh();
-                            TasksDataGrid.Items.Refresh();
-                        }
-                    }
-                }
-            }
-        }
-
         private void SidePanelButton_Click(object sender, RoutedEventArgs e)
         {
             if (Equals(SidePanelButton.Content, "<"))
@@ -328,7 +306,7 @@ namespace TodoLista.Pages.Home
 
         private void UserImageButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            new UserImageWindow().Show();
         }
 
         private void ShowOnlyUnfinishedTasksCheckBox_Click(object sender, RoutedEventArgs e)

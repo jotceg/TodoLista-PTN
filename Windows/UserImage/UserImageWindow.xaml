@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="UserImageWindow" Height="450" Width="800">
     <Grid>
-        
+        <Rectangle Opacity="0.8">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Aquamarine" Offset="0.0"/>
+                    <GradientStop Color="Bisque" Offset="0.25"/>
+                    <GradientStop Color="Coral" Offset="0.50"/>
+                    <GradientStop Color="DarkGoldenrod" Offset="0.75"/>
+                    <GradientStop Color="ForestGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="2"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Dostępne Zdjęcia:" HorizontalContentAlignment="Center" FontSize="25" FontFamily="Bahnschrift"/>
+            <ListView x:Name="UserImageList" Height="180" Background="Transparent" BorderThickness="2" BorderBrush="Black">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="4"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Height="70" Width="70" Source="{Binding Source}" Margin="10,10,10,10"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Separator Height="10" Opacity="0"/>
+            <Button x:Name="ChooseImageButton" VerticalContentAlignment="Center" FontSize="25" FontFamily="Bahnschrift" Content="Wybierz" Background="White" Click="ChooseImageButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

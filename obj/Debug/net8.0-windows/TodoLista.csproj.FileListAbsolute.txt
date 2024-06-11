@@ -92,12 +92,8 @@ E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\EditTask\Edit
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\bin\Debug\net8.0-windows\TodoLista.dll.config
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Home\Home.g.cs
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\RegistrationAndLogin\RegistrationAndLogin.g.cs
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.g.cs
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.g.cs
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Home\Home.baml
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\RegistrationAndLogin\RegistrationAndLogin.baml
-C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Scripts\Tasks\MainMenuEditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\EditTask\EditTaskWindow.baml
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.g.cs
 C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\UserImage\UserImageWindow.baml
@@ -109,3 +105,9 @@ E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Register\Regist
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Pages\Register\Register.baml
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.g.cs
 E:\VisualStudioProjects\TodoLista\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Login\Login.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Login\Login.g.cs
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Register\Register.g.cs
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.g.cs
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Pages\Register\Register.baml
+C:\Users\kaniu\Documents\GitHub\TodoLista-PTN\obj\Debug\net8.0-windows\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.baml

@@ -5,37 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoLista.Scripts.Tasks"
         mc:Ignorable="d"
-        Title="MainMenuEditTaskWindow" Height="450" Width="800">
+        Title="Edytowanie Zadania" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Margin="10">
-            <TextBlock Text="Edytuj Zadanie" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="3" Opacity="0.8">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Aquamarine" Offset="0.0"/>
+                    <GradientStop Color="Bisque" Offset="0.25"/>
+                    <GradientStop Color="Coral" Offset="0.50"/>
+                    <GradientStop Color="DarkGoldenrod" Offset="0.75"/>
+                    <GradientStop Color="ForestGreen" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="3"/>
+        <StackPanel Grid.ColumnSpan="2" Margin="10,10,10,10">
+            <TextBlock Text="Nazwa zadania*:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
+            <TextBox x:Name="TitleTextBox" VerticalAlignment="Stretch" FontSize="20" FontFamily="Bahnschrift"/>
+            <TextBlock Text="Opis:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
+            <TextBox x:Name="DescriptionTextBox" VerticalAlignment="Stretch" Height="100" TextWrapping="Wrap" AcceptsReturn="True" FontSize="20" FontFamily="Bahnschrift"/>
+            <TextBlock Text="Priorytet*:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
+            <ComboBox x:Name="PriorityComboBox" VerticalAlignment="Stretch" SelectedIndex="0"  FontSize="20" FontFamily="Bahnschrift">
+                <ComboBoxItem Content="Low"/>
+                <ComboBoxItem Content="Medium"/>
+                <ComboBoxItem Content="High"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="10,10,10,10">
+            <TextBlock Text="Data:" VerticalAlignment="Stretch" FontSize="25" FontFamily="Bahnschrift"/>
+            <DatePicker x:Name="DatePickerBtn" VerticalAlignment="Stretch" FontSize="20" FontFamily="Bahnschrift"/>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Priority:" VerticalAlignment="Center" Width="80"/>
-                <ComboBox x:Name="PriorityComboBox" Width="200" SelectedIndex="0">
-                    <ComboBoxItem Content="Low"/>
-                    <ComboBoxItem Content="Medium"/>
-                    <ComboBoxItem Content="High"/>
-                </ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Title:" VerticalAlignment="Center" Width="80"/>
-                <TextBox x:Name="TitleTextBox" Width="200"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Description:" VerticalAlignment="Center" Width="80"/>
-                <TextBox x:Name="DescriptionTextBox" Width="200" Height="100" TextWrapping="Wrap" AcceptsReturn="True"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Date:" VerticalAlignment="Center" Width="80"/>
-                <DatePicker x:Name="DatePickerBtn" Width="200"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Text="Time:" VerticalAlignment="Center" Width="80"/>
-                <ComboBox x:Name="TimeHourComboBox" Width="60">
+                <TextBlock Text="Time:" VerticalAlignment="Center" Width="80" FontSize="25" FontFamily="Bahnschrift"/>
+                <ComboBox x:Name="TimeHourComboBox" Width="60" FontSize="20" FontFamily="Bahnschrift">
                     <!-- Add hours here -->
                     <ComboBoxItem Content="00"/>
                     <ComboBoxItem Content="01"/>
@@ -61,11 +67,11 @@
                     <ComboBoxItem Content="21"/>
                     <ComboBoxItem Content="22"/>
                     <ComboBoxItem Content="23"/>
-                   
+
                     <!-- Add more hours as needed -->
                 </ComboBox>
                 <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0"/>
-                <ComboBox x:Name="TimeMinutesComboBox" Width="60">
+                <ComboBox x:Name="TimeMinutesComboBox" Width="60" FontSize="20" FontFamily="Bahnschrift">
                     <!-- Add minutes here -->
                     <ComboBoxItem>00</ComboBoxItem>
                     <ComboBoxItem>01</ComboBoxItem>
@@ -130,11 +136,9 @@
                     <!-- Add more minutes as needed -->
                 </ComboBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Zapisz" Width="80" Margin="5" Click="SaveTaskBtn_Click"/>
-                <Button Content="Usuń" Width="80" Margin="5" Click="DeleteTaskBtn_Click"/>
-                <Button Content="Wróć" Width="80" Margin="5" Click="CancelTaskBtn_Click"/>
-            </StackPanel>
         </StackPanel>
+        <Button Content="Zapisz" Grid.Column="0" FontSize="20" FontFamily="Bahnschrift" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="10,10,10,10" Click="SaveTaskBtn_Click"/>
+        <Button Content="Usuń" Grid.Column="1" FontSize="20" FontFamily="Bahnschrift" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="10,10,10,10" Click="DeleteTaskBtn_Click"/>
+        <Button Content="Wróć" Grid.Column="2" FontSize="20" FontFamily="Bahnschrift" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="10,10,10,10" Click="CancelTaskBtn_Click"/>
     </Grid>
 </Window>
