@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoLista.Scripts.Tasks"
         mc:Ignorable="d"
-        Title="Zarządzanie zadaniem" Height="450" Width="800">
+        Title="Dodawanie Zadania" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0*"/> <!-- Contains Tasks DataGrid & DeleteAllTasks Button -->
         </Grid.ColumnDefinitions>
-        <Rectangle Grid.ColumnSpan="4" Opacity="0.8">
+        <Rectangle Grid.ColumnSpan="3" Opacity="0.8">
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="Aquamarine" Offset="0.0"/>
@@ -23,6 +23,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.ColumnSpan="2"/>
         <StackPanel Margin="10,10,10,10" Grid.ColumnSpan="2">
             <Label Content="Nazwa zadania*:" FontSize="25" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
             <TextBox  x:Name="TitleTextBox" FontSize="20" FontFamily="Bahnschrift" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top"/>
