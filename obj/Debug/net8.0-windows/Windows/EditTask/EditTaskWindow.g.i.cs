@@ -141,7 +141,7 @@ namespace TodoLista.Windows.EditTask {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TodoLista;V1.0.0.0;component/windows/edittask/edittaskwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TodoLista;component/windows/edittask/edittaskwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Windows\EditTask\EditTaskWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

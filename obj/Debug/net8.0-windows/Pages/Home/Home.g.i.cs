@@ -189,7 +189,7 @@ namespace TodoLista.Pages.Home {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TodoLista;V1.0.0.0;component/pages/home/home.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TodoLista;component/pages/home/home.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\Home\Home.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

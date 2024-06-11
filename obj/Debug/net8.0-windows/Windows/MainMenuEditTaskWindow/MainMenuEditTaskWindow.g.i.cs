@@ -101,8 +101,7 @@ namespace TodoLista.Windows.MainMenuEditTaskWindow {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TodoLista;V1.0.0.0;component/windows/mainmenuedittaskwindow/mainmenuedittaskwind" +
-                    "ow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TodoLista;component/windows/mainmenuedittaskwindow/mainmenuedittaskwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Windows\MainMenuEditTaskWindow\MainMenuEditTaskWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
