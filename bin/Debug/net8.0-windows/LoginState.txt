@@ -1,2 +1,2 @@
 User: kuba
-UserPassword: kuba
+UserPassword: KubaKuba

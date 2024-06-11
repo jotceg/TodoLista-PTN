@@ -32,7 +32,7 @@ namespace TodoLista.Windows.EditTask
         private DataTable dt;
 
         //DataBase NAme and Connection Location Information  
-        private const string DataBaseName = "TasksDataBase.accdb";
+        /* private const string DataBaseName = "TasksDataBase.accdb";
         private const string connectionAndDataString = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + DataBaseName;
 
         private const string userDataBase = "UserDataBase.accdb";
@@ -40,7 +40,8 @@ namespace TodoLista.Windows.EditTask
         private const string tasksDataBase = "TasksDataBase.accdb";
         private const string userDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + userDataBase;
         private const string tasksListDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksListsDataBase;
-        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase;
+        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase; */
+        private const string connectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=DataBase.accdb";
 
         public EditTaskWindow()
         {
@@ -80,7 +81,7 @@ namespace TodoLista.Windows.EditTask
             int userId = 0;
             string userLogin = "", userPassword = "";
 
-            using (conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -104,7 +105,7 @@ namespace TodoLista.Windows.EditTask
 
             List<TasksList> tasksLists = new List<TasksList>();
 
-            using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT * FROM Lists where UserId = @UserId";
 
@@ -131,7 +132,7 @@ namespace TodoLista.Windows.EditTask
 
             for (int i = 0; i < tasksLists.Count(); i++)
             {
-                using (conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                using (conn = new OleDbConnection(connectionAndDataSetting))
                 {
                     string query = "SELECT * FROM Tasks where ListId = @ListId";
 
@@ -151,8 +152,9 @@ namespace TodoLista.Windows.EditTask
                                 string description = reader["Description"].ToString();
                                 string priority = (string)reader["Priority"];
                                 DateTime realizationDate = (DateTime)reader["RealizationDate"];
+                                bool isCompleted = (bool)reader["IsCompleted"];
 
-                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate, isCompleted));
                             }
                         }
                     }
@@ -177,7 +179,7 @@ namespace TodoLista.Windows.EditTask
                 return;
             }
 
-            using (conn = new OleDbConnection(connectionAndDataString))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "INSERT INTO Tasks (ListId, Title, Description, Priority, RealizationDate) VALUES (@ListId, @Title, @Description, @Priority, @RealizationDate)";
 
@@ -213,7 +215,7 @@ namespace TodoLista.Windows.EditTask
 
         public void MarkAsCompleted(int id)
         {
-            conn = new OleDbConnection(connectionAndDataString);
+            conn = new OleDbConnection(connectionAndDataSetting);
 
             string query = "UPDATE Tasks SET IsCompleted = @IsCompleted WHERE Id = @Id";
 
@@ -230,7 +232,7 @@ namespace TodoLista.Windows.EditTask
 
         public void DeleteTask(int id)
         {
-            conn = new OleDbConnection(connectionAndDataString);
+            conn = new OleDbConnection(connectionAndDataSetting);
 
 
             string deleteQuery = "DELETE FROM Tasks WHERE Id = @Id";
@@ -284,7 +286,7 @@ namespace TodoLista.Windows.EditTask
 
         private void DeleteAllTasks()
         {
-            conn = new OleDbConnection(connectionAndDataString);
+            conn = new OleDbConnection(connectionAndDataSetting);
             
 
             string query = "DELETE FROM Tasks";
@@ -338,7 +340,7 @@ namespace TodoLista.Windows.EditTask
 
         private bool IsTaskExists(int id)
         {
-            conn = new OleDbConnection(connectionAndDataString);
+            conn = new OleDbConnection(connectionAndDataSetting);
 
             string query = "SELECT COUNT(*) FROM Tasks WHERE Id = @Id AND IsCompleted = @IsCompleted";
             cmd = new OleDbCommand(query, conn);
@@ -355,7 +357,7 @@ namespace TodoLista.Windows.EditTask
         public void GetTimeTableData()
         {
 
-            conn = new OleDbConnection(connectionAndDataString);
+            conn = new OleDbConnection(connectionAndDataSetting);
             dt = new DataTable();
             adapter = new OleDbDataAdapter("SELECT *FROM Tasks", conn);
 

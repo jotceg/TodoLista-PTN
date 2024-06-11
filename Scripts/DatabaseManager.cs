@@ -15,12 +15,13 @@ namespace TodoLista.Scripts
 {
     public static class DatabaseManager
     {
-        private const string userDataBase = "UserDataBase.accdb";
+        /* private const string userDataBase = "UserDataBase.accdb";
         private const string tasksListsDataBase = "TasksListsDataBase.accdb";
         private const string tasksDataBase = "TasksDataBase.accdb";
         private const string userDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + userDataBase;
         private const string tasksListDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksListsDataBase;
-        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase;
+        private const string tasksDataBaseConnectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=" + tasksDataBase; */
+        private const string connectionAndDataSetting = "Provider=Microsoft.ACE.OleDb.16.0; Data Source=DataBase.accdb";
 
         public static bool DoesUserExist(string name)
         {
@@ -31,7 +32,7 @@ namespace TodoLista.Scripts
             DataTable dt;
 
             name = name.Trim(); // Do not take into account spaces in login 
-            conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
+            conn = new OleDbConnection(connectionAndDataSetting);
             string query = "SELECT COUNT(*) FROM Users WHERE  StrComp(Name ,@Name,0) = 0";
 
             cmd = new OleDbCommand(query, conn);
@@ -53,7 +54,7 @@ namespace TodoLista.Scripts
                 return;
             }
 
-            using (OleDbConnection conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "INSERT INTO Lists (ListName, UserId) VALUES (@ListName, @UserId)";
 
@@ -73,7 +74,7 @@ namespace TodoLista.Scripts
         {
             taskName = taskName.Trim(); // Remove leading and trailing spaces
 
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT COUNT(*) FROM Tasks WHERE StrComp(Title, @TaskName, 0) = 0 AND ListId = @ListId";
 
@@ -95,7 +96,7 @@ namespace TodoLista.Scripts
         {
             ListName = ListName.Trim(); // Remove leading and trailing spaces
 
-            using (OleDbConnection conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT COUNT(*) FROM Lists WHERE StrComp(ListName, @ListName, 0) = 0 AND UserId = @UserId";
 
@@ -118,7 +119,7 @@ namespace TodoLista.Scripts
             
             newName = newName.Trim();
            
-            using (OleDbConnection conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "UPDATE Lists SET ListName = @NewName WHERE ListId = @ListId AND UserId = @UserId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -144,7 +145,7 @@ namespace TodoLista.Scripts
 
             userName = userName.Trim();  // Do not take into account spaces in login 
 
-            conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
+            conn = new OleDbConnection(connectionAndDataSetting);
 
             string query = "SELECT COUNT(*) FROM Users WHERE  StrComp(Name, @Name,0) = 0 AND  StrComp(UserPassword ,@UserPassword, 0) = 0";
             cmd = new OleDbCommand(query, conn);
@@ -160,7 +161,7 @@ namespace TodoLista.Scripts
 
         public static void DeleteSingleTask(int taskId)
         {
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "DELETE FROM Tasks WHERE TaskId = @TaskId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -176,7 +177,7 @@ namespace TodoLista.Scripts
 
         public static void RenameSingleTask(int taskId, string newTaskName)
         {
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "UPDATE Tasks SET Title = @Title WHERE TaskId = @TaskId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -195,7 +196,7 @@ namespace TodoLista.Scripts
         {
             DeleteAllTasksFromList(listId);
 
-            using (OleDbConnection conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "DELETE FROM Lists WHERE ListId = @ListId AND UserId = @UserId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -211,7 +212,7 @@ namespace TodoLista.Scripts
         }
         public static void DeleteAllTasksFromList(int listId)
         {
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "DELETE FROM Tasks WHERE ListId = @ListId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -230,7 +231,7 @@ namespace TodoLista.Scripts
 
             OleDbConnection conn;
           
-            using (conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -254,7 +255,7 @@ namespace TodoLista.Scripts
 
             List<TasksList> tasksLists = new List<TasksList>();
 
-            using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT * FROM Lists where UserId = @UserId";
 
@@ -281,7 +282,7 @@ namespace TodoLista.Scripts
 
             for (int i = 0; i < tasksLists.Count(); i++)
             {
-                using (conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                using (conn = new OleDbConnection(connectionAndDataSetting))
                 {
                     string query = "SELECT * FROM Tasks where ListId = @ListId";
 
@@ -301,8 +302,9 @@ namespace TodoLista.Scripts
                                 string description = reader["Description"].ToString();
                                 string priority = (string)reader["Priority"];
                                 DateTime realizationDate = (DateTime)reader["RealizationDate"];
+                                bool isCompleted = (bool)reader["IsCompleted"];
 
-                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate, isCompleted));
                             }
                         }
                     }
@@ -314,7 +316,7 @@ namespace TodoLista.Scripts
 
         public static void UpdateTask(Scripts.Tasks.Task task)
         {
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "UPDATE Tasks SET Title = @Title, Description = @Description, Priority = @Priority, RealizationDate = @RealizationDate WHERE TaskId = @TaskId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -336,7 +338,7 @@ namespace TodoLista.Scripts
             // Kod do pobierania zadań użytkownika z bazy danych
             List<Scripts.Tasks.Task> tasks = new List<Scripts.Tasks.Task>();
 
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT * FROM Tasks WHERE UserId = @UserId";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
@@ -354,8 +356,9 @@ namespace TodoLista.Scripts
                             string description = reader["Description"].ToString();
                             string priority = reader["Priority"].ToString();
                             DateTime realizationDate = (DateTime)reader["RealizationDate"];
+                            bool isCompleted = (bool)reader["IsCompleted"];
 
-                            tasks.Add(new Scripts.Tasks.Task(taskId, listId, title, description, priority, realizationDate));
+                            tasks.Add(new Scripts.Tasks.Task(taskId, listId, title, description, priority, realizationDate, isCompleted));
                         }
                     }
                 }
@@ -366,7 +369,7 @@ namespace TodoLista.Scripts
 
         public static void UpdateTask(int taskId, string title, string description, string priority, DateTime realizationDate)
         {
-            using (OleDbConnection conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "UPDATE Tasks SET Title = @Title, Description = @Description, Priority = @Priority, RealizationDate = @RealizationDate WHERE TaskId = @TaskId";
 
@@ -389,7 +392,7 @@ namespace TodoLista.Scripts
 
         public static bool TryLoginUserAutomatically(string login, string password)
         {
-            using (var conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (var conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (var cmd = new OleDbCommand(query, conn))
@@ -424,7 +427,7 @@ namespace TodoLista.Scripts
             int userId = 0;
             string userLogin = "", userPassword = "";
 
-            using (var conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (var conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (var cmd = new OleDbCommand(query, conn))
@@ -459,7 +462,7 @@ namespace TodoLista.Scripts
         {
             List<TasksList> tasksLists = new List<TasksList>();
 
-            using (var conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (var conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT * FROM Lists where UserId = @UserId";
 
@@ -485,7 +488,7 @@ namespace TodoLista.Scripts
 
             for (int i = 0; i < tasksLists.Count; i++)
             {
-                using (var conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                using (var conn = new OleDbConnection(connectionAndDataSetting))
                 {
                     string query = "SELECT * FROM Tasks where ListId = @ListId";
 
@@ -504,8 +507,9 @@ namespace TodoLista.Scripts
                                 string description = reader["Description"].ToString();
                                 string priority = (string)reader["Priority"];
                                 DateTime realizationDate = (DateTime)reader["RealizationDate"];
+                                bool isCompleted = (bool)reader["IsCompleted"];
 
-                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate, isCompleted));
                             }
                         }
                     }
@@ -517,7 +521,7 @@ namespace TodoLista.Scripts
 
         public static DataTable GetAllRegisteredUsers()
         {
-            using (OleDbConnection conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
             {
                 using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Users", conn))
                 {
@@ -538,7 +542,7 @@ namespace TodoLista.Scripts
             OleDbDataAdapter adapter;
             DataTable dt;
 
-            conn = new OleDbConnection(userDataBaseConnectionAndDataSetting);
+            conn = new OleDbConnection(connectionAndDataSetting);
 
             string query = "DELETE FROM Users";
             cmd = new OleDbCommand(query, conn);
@@ -558,7 +562,7 @@ namespace TodoLista.Scripts
 
             List<TasksList> tasksLists = new List<TasksList>();
 
-            using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT * FROM Lists where UserId = @UserId";
 
@@ -585,7 +589,7 @@ namespace TodoLista.Scripts
 
             for (int i = 0; i < tasksLists.Count(); i++)
             {
-                using (conn = new OleDbConnection(tasksDataBaseConnectionAndDataSetting))
+                using (conn = new OleDbConnection(connectionAndDataSetting))
                 {
                     string query = "SELECT * FROM Tasks where ListId = @ListId";
 
@@ -605,8 +609,9 @@ namespace TodoLista.Scripts
                                 string description = reader["Description"].ToString();
                                 string priority = (string)reader["Priority"];
                                 DateTime realizationDate = (DateTime)reader["RealizationDate"];
+                                bool isCompleted = (bool)reader["IsCompleted"];
 
-                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate));
+                                tasksLists[i].Tasks.Add(new Scripts.Tasks.Task(taskId, tasksLists[i].Id, taskName, description, priority, realizationDate, isCompleted));
                             }
                         }
                     }
@@ -627,7 +632,7 @@ namespace TodoLista.Scripts
             int userId = 0;
             string userLogin = "", userPassword = "";
 
-            using (conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "SELECT Id, Name, UserPassword FROM Users WHERE Name = @Name AND UserPassword = @UserPassword";
                 using (cmd = new OleDbCommand(query, conn))
@@ -652,6 +657,25 @@ namespace TodoLista.Scripts
             ImplementUserData(userId, userLogin, userPassword);
         }
 
+        public static void MarkTaskAsCompleted(int id, bool isCompleted)
+        {
+            using (OleDbConnection conn = new OleDbConnection(connectionAndDataSetting))
+            {
+                string query = "UPDATE Tasks SET IsCompleted = @IsCompleted WHERE TaskId = @TaskId";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@IsCompleted", isCompleted);
+                    cmd.Parameters.AddWithValue("@TaskId", id);
+                    conn.Open(); // Open Connetction With DataBase
+                    cmd.ExecuteNonQuery(); // Allows to Insert Changes in DataBase
+                }
+
+                RetrieveUserData();
+            }
+
+        }
+
         public static void RegisterUser(string name, string password)
         {
             string userId;
@@ -662,7 +686,7 @@ namespace TodoLista.Scripts
             OleDbDataAdapter adapter;
             DataTable dt;
 
-            using (conn = new OleDbConnection(userDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "INSERT INTO Users (Name, UserPassword) VALUES (@Name, @UserPassword)";
 
@@ -680,7 +704,7 @@ namespace TodoLista.Scripts
                 }
             }
 
-            using (conn = new OleDbConnection(tasksListDataBaseConnectionAndDataSetting))
+            using (conn = new OleDbConnection(connectionAndDataSetting))
             {
                 string query = "INSERT INTO Lists (ListName, UserId) VALUES (@ListName, @UserId)";
 

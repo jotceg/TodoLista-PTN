@@ -15,6 +15,7 @@ namespace TodoLista.Scripts.Tasks
         public string Description { get; set; }
         public string Priority { get; set; }
         public DateTime Date {  get; set; }
+        public bool isCompleted { get; set; }
 
         public int RealizationHour
         {
@@ -28,7 +29,7 @@ namespace TodoLista.Scripts.Tasks
             set => Date = new DateTime(Date.Year, Date.Month, Date.Day, Date.Hour, value, 0);
         }
 
-        public Task(int Id, int ListId, string Title, string Description, string Priority, DateTime Date)
+        public Task(int Id, int ListId, string Title, string Description, string Priority, DateTime Date, bool isCompleted)
         {
             this.Id = Id;
             this.ListId = ListId;
@@ -36,6 +37,7 @@ namespace TodoLista.Scripts.Tasks
             this.Description = Description;
             this.Priority = Priority;
             this.Date = Date;
+            this.isCompleted = isCompleted;
         }
 
         // title, priority (low, medium, high), description, date, etc

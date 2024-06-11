@@ -55,7 +55,7 @@ namespace TodoLista.Pages.Home
             }
         }
 
-        public void LoadTasksForSelectedList()
+        public void LoadTasksForSelectedList(bool showOnlyUnfinishedTasks = false)
         {
             TasksDataGrid.ItemsSource = null;
 
@@ -65,7 +65,20 @@ namespace TodoLista.Pages.Home
             {
                 if (tasksList.Id == State.SelectedTasksListId)
                 {
-                    TasksDataGrid.ItemsSource = tasksList.Tasks;
+                    // only display tasks that are not yet completed
+                    List<Scripts.Tasks.Task> tasks = tasksList.Tasks;
+                    if (showOnlyUnfinishedTasks == true)
+                    {
+                        List<Scripts.Tasks.Task> _tasks = new List<Scripts.Tasks.Task>();
+
+                        for (int i = 0; i < tasks.Count; i++)
+                        {
+                            if (tasks[i].isCompleted == false) _tasks.Add(tasks[i]);
+                        }
+
+                        tasks = _tasks;
+                    }
+                    TasksDataGrid.ItemsSource = tasks;
                     TopNameTextBox.Text = $"Wybrana lista zadań to: {selectedList?.Name}";
                     break;
                 }
@@ -264,14 +277,11 @@ namespace TodoLista.Pages.Home
                     int taskId = int.Parse(stackPanel.Uid);
                     if (taskId != null)
                     {
-                        if (checkBox.IsChecked.Value)
-                        {
-                            DatabaseManager.DeleteSingleTask(taskId);
-                            MessageBox.Show("Gratulujemy wykonania zadania", "Gratulacje!");
-                            InitializeUserData();
-                            TasksListsItemsControl.Items.Refresh();
-                            TasksDataGrid.Items.Refresh();
-                        }
+                        DatabaseManager.MarkTaskAsCompleted(taskId, checkBox.IsChecked.Value);
+                        //MessageBox.Show("Gratulujemy wykonania zadania", "Gratulacje!");
+                        InitializeUserData();
+                        TasksListsItemsControl.Items.Refresh();
+                        TasksDataGrid.Items.Refresh();
                     }
                 }
             }
@@ -319,6 +329,17 @@ namespace TodoLista.Pages.Home
         private void UserImageButton_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void ShowOnlyUnfinishedTasksCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if (ShowOnlyUnfinishedTasksCheckBox.IsChecked.Value)
+            {
+                LoadTasksForSelectedList(true);
+            } else
+            {
+                LoadTasksForSelectedList(false);
+            }
         }
     }
 
